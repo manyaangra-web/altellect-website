@@ -1,0 +1,84 @@
+:root {
+  --yellow: #FDB913;
+  --dark: #3C3B3B;
+  --dark-alt: #3B3B3B;
+  --light: #F2F2F2;
+  --gray: #6A6A6A;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.header-container {
+  max-width: 1500px;
+  margin: auto;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.logo-wrap img {
+  height: 28px;
+}
+
+.nav {
+  display: flex;
+  gap: 26px;
+}
+
+.nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+}
+
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background: var(--yellow);
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.join-btn {
+  background: var(--white);
+  color: var(--dark);
+  border: none;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
