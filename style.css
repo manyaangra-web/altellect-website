@@ -1,3 +1,301 @@
+/* Leadership Section (XD Spec) */
+.leadership-section {
+  background: #F8F8F8;
+  padding: 64px 0 56px 0;
+}
+.leadership-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-title {
+  font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}
+.leadership-section .accent-line {
+  width: 100%;
+  max-width: 900px;
+  height: 2px;
+  background: #FDB913;
+  margin: 0 auto 32px auto;
+}
+.section-desc {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 17px;
+  color: #222;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.leadership-cards {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 40px;
+}
+.leader-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  padding: 32px 36px;
+  min-width: 340px;
+  max-width: 420px;
+  text-align: left;
+  margin: 0;
+}
+.leader-img {
+  min-width: 100px;
+  min-height: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #FDB913;
+  overflow: hidden;
+  margin-right: 24px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.leader-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.leader-info h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 2px 0;
+  color: #111;
+}
+.leader-title {
+  font-size: 1rem;
+  color: #FDB913;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+.leader-dash {
+  border-bottom: 1.5px dashed #bbb;
+  width: 100%;
+  margin: 8px 0 10px 0;
+}
+.leader-exp {
+  font-size: 0.98rem;
+  margin-bottom: 4px;
+  color: #222;
+}
+.leader-journey {
+  font-size: 0.98rem;
+  margin-bottom: 0;
+  color: #222;
+}
+.leader-journey strong {
+  font-weight: 700;
+  color: #111;
+}
+@media (max-width: 900px) {
+  .leadership-cards {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .leader-card {
+    min-width: 90vw;
+    max-width: 98vw;
+  }
+}
+.build-item .count-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+/* How We Build Ventures Section (XD Spec) */
+.how-we-build {
+  background: #3A3A3A;
+  color: #fff;
+  padding: 64px 0 56px 0;
+}
+.how-we-build .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.how-we-build h2 {
+  font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #fff;
+}
+.accent-line {
+  width: 100%;
+  max-width: 900px;
+  height: 2px;
+  /* Removed yellow background, only image border is yellow */
+  margin: 0 auto 32px auto;
+}
+.how-we-build .subtitle {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+.how-we-build .subtitle span {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+}
+.build-grid {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 32px;
+}
+.build-item {
+  background: transparent;
+  color: #fff;
+  flex: 1 1 0;
+  max-width: 340px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 18px;
+}
+.build-item .count-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0;
+}
+.count {
+  display: inline-block;
+  background: #FDB913;
+  color: #fff;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin-right: 0;
+}
+.build-item > div:not(.count-wrap) {
+  flex: 1;
+}
+@media (max-width: 900px) {
+  .build-grid {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .build-item {
+    max-width: 98vw;
+    text-align: left;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .build-item .count-wrap {
+    margin-bottom: 18px;
+    justify-content: center;
+  }
+}
+}
+.build-item {
+  background: transparent;
+  color: #fff;
+  flex: 1 1 0;
+  max-width: 340px;
+  text-align: left;
+}
+.count-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 18px;
+}
+.count {
+  display: inline-block;
+  background: #FDB913;
+  color: #fff;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 56px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin-right: 18px;
+}
+.build-item h4 {
+  font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.build-item p {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .build-grid {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .build-item {
+    max-width: 98vw;
+    text-align: left;
+  }
+}
+
+/* Font Face Definitions */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/roboto/roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/roboto/roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Montserrat', 'Roboto';
+}
 /* --- CAREERS PAGE TABLE LAYOUT --- */
 .careers-table-section {
   background: #ededed;
@@ -1181,27 +1479,34 @@
     max-width: 98vw;
   }
 }
-/* ================= ABOUT US PAGE ================= */
-.about-hero {
-    color: #fff !important;
-  position: relative;
-  height: 350px;
-  background: url('assets/about-hero.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
+
 .about-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.7));
+  background: linear-gradient(90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.55) 100%);
   z-index: 1;
 }
-.about-hero .container {
+.about-hero-content {
   position: relative;
   z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding-bottom: 40px;
+}
+.about-hero-title {
+  font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 32px 0;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.25);
+  letter-spacing: 0.75px;
+  line-height: 1.1;
+  max-width: 820px;
 }
 .about-hero {
   position: relative;
@@ -1741,18 +2046,18 @@ body {
 
 /* LEFT SIDE */
 .intro-eyebrow {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: #6a6a6a;
+  color: #000;
   display: block;
   margin-bottom: 18px;
 }
 
 .intro-title {
-  font-size: 32px;
+  font-size: 44px;
   font-weight: 700;
-  color: #3c3b3b;
+  color: #000;
   line-height: 1.25;
   margin-bottom: 22px;
 }
@@ -1760,7 +2065,7 @@ body {
 .intro-desc {
   font-size: 14px;
   line-height: 1.7;
-  color: #6a6a6a;
+  color: #000;
   max-width: 480px;
   margin-bottom: 26px;
 }
@@ -1787,11 +2092,11 @@ body {
 }
 
 .stat-label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #3c3b3b;
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 12px;
 }
 
 .stat-row {
@@ -1805,16 +2110,17 @@ body {
 }
 
 .stat-number {
-  font-size: 72px;
+  font-size: 100px;
   font-weight: 700;
   color: #fdb913;
   line-height: 1;
 }
 
 .stat-text {
-  font-size: 32px;
-  color: #6a6a6a;
-  line-height: 1.3;
+    font-size: 32px;
+    color: #525252;
+    line-height: 1.3;
+    font-family: 'montserrat';
 }
 
 /* Divider */
@@ -1841,12 +2147,12 @@ body {
 
 /* TITLE */
 .capabilities-title {
-  font: normal normal bold 32px/39px Montserrat;
+  font: normal normal bold 32px/39px Roboto;
   margin-bottom: 10px;
 }
 
 .capabilities-subtitle {
-  font: normal normal normal 16px/24px Montserrat;
+  font: normal normal normal 16px/24px Roboto;
   color: #cfcfcf;
   margin-bottom: 64px;
 }
@@ -1865,8 +2171,17 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 18px;
+  font-family: 'roboto';
 }
+.capability-item h4{
+  font-size: 16px;
+  font-weight: bold;
 
+}
+.capability-item p{
+  font-size: 14px;
+  font-weight: normal;
+}
 /* ICON */
 .capability-item img {
   width: 42px;
@@ -1894,34 +2209,49 @@ body {
 }
 
 /* CTA BETWEEN CAPABILITIES & FOOTER */
+
+/* CTA BAR (XD Spec) */
 .cta-wrap {
-  background: transparent;
+  background: #fff;
   position: relative;
   z-index: 2;
-  margin-top: -67px;
-  /* pulls CTA up into capabilities */
-  margin-bottom: -55px;
-  /* pushes footer up */
+  margin: 0;
+  padding: 0;
 }
-
 .cta-inner {
-  background: #eeeeee;
-  max-width: 1200px;
+  background: #fff;
+  max-width: 100vw;
   margin: 0 auto;
-  padding: 38px 0;
+  padding: 48px 0 40px 0;
   display: flex;
-  justify-content: center;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  /* XD has no shadow */
+  flex-direction: column;
+  align-items: center;
+  box-shadow: none;
 }
-
+.cta-title {
+  font-family: 'Roboto';
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 32px;
+  text-align: center;
+}
 .cta-btn {
-  background: #fdb913;
-  color: #000;
+  background: #666;
+  color: #fff;
   border: none;
-  font: normal normal bold 14px/18px Montserrat;
-  padding: 14px 48px;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 700;
+  padding: 12px 48px;
+  border-radius: 0;
+  box-shadow: none;
+  letter-spacing: 1px;
   cursor: pointer;
+  transition: background 0.2s;
+}
+.cta-btn:hover {
+  background: #444;
 }
 
 /* FOOTER */
@@ -2271,7 +2601,9 @@ body {
 /* ================= ABOUT – ECOSYSTEM ================= */
 
 .about-ecosystem {
-  background: #ffffff;
+
+  background: #F2F2F2 0% 0% no-repeat padding-box;
+
   padding: 110px 0 100px;
   text-align: center;
 }
