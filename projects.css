@@ -1,3 +1,108 @@
+/* Center-align last card if it's alone in the last row of a 3-column grid */
+.ventures-grid > .venture-card.horizontal-card:last-child:nth-child(3n+1) {
+  grid-column: 2 / 3;
+}
+
+.ventures-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.venture-card.horizontal-card {
+  background: #fff;
+  padding: 12px;
+  min-height: 140px;
+  height: 100%;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.venture-card.horizontal-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+@media (max-width: 1100px) {
+  .venture-card.horizontal-card {
+    width: calc(50% - 16px);
+  }
+}
+
+@media (max-width: 700px) {
+  .venture-card.horizontal-card {
+    width: 100%;
+    min-width: unset;
+  }
+  .ventures-grid {
+    gap: 20px;
+  }
+}
+
+/* Center last card if it's alone in last row */
+.ventures-grid .venture-card.horizontal-card:last-child:nth-child(3n+2),
+.ventures-grid .venture-card.horizontal-card:last-child:nth-child(3n+1) {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Horizontal venture card layout: image left, text right */
+
+.venture-card.horizontal-card .venture-img-wrap {
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0;
+  margin-right: 24px;
+}
+
+.venture-card.horizontal-card .venture-icon {
+  object-fit: contain;
+}
+
+.venture-card.horizontal-card .venture-content-wrap {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+/* Venture card title and description styling for compact look */
+.venture-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.08rem;
+  color: #222;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.venture-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.98rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+@media (max-width: 1100px) {
+  .ventures-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .ventures-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
 /* projects.css - Custom styles for Projects page */
 
 .projects-hero {
@@ -35,8 +140,8 @@
   margin-bottom: 0;
 }
 .ventures-section {
-  background: #f7f7f7;
-  padding: 48px 0 0 0;
+background: #F2F2F2 0% 0% no-repeat padding-box;
+  padding: 48px 0 48px 0;
 }
 .ventures-headline {
   text-align: center;
@@ -50,20 +155,11 @@
   font-size: 1.05rem;
   margin-bottom: 36px;
 }
-.ventures-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto 48px auto;
-  padding: 0 16px;
-}
+
 .venture-card {
   background: #fff;
-  border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.04);
   padding: 28px 18px 22px 18px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,6 +201,27 @@
 }
 @media (max-width: 1100px) {
   .ventures-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 900px) {
+  .ventures-grid {
+    gap: 18px;
+  }
+  .venture-card.horizontal-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 18px 8px;
+    min-height: 0;
+  }
+  .venture-img-wrap {
+    margin-right: 0;
+    margin-bottom: 12px;
+    height: 64px;
+    justify-content: center;
+  }
+  .venture-content-wrap {
+    align-items: center;
+  }
 }
 @media (max-width: 700px) {
   .ventures-grid { grid-template-columns: 1fr; }

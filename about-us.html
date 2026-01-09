@@ -4,14 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us – Altellect</title>
+  <link rel="icon" type="image/png" href="assets/Logo.png" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
-  
-
 </head>
 <body>
   <!-- HEADER -->
@@ -56,6 +55,7 @@
     </p>
   </div>
 </section>
+
 
 <!-- HOW WE BUILD -->
 
@@ -108,92 +108,333 @@
       </p>
     </div>
 
-    <div class="belief-card">
-      <img src="assets/belief-2.jpg" alt="">
-      <h4>Our Belief</h4>
-      <p>
-        Strong ventures are ecosystems. We design infrastructure
-        that compounds over time.
-      </p>
-    </div>
+    <section class="belief-section" style="background: #F2F2F2 0% 0% no-repeat padding-box;">
+      <div class="belief-row">
+        <div class="belief-col">
+          <h4>From Market-Product Fit to Scale</h4>
+          <div class="belief-yellow-line"></div>
+          <p>
+         Once fit is established, we support ventures with shared infrastructure — spanning strategy, brand, operations, talent, and growth — enabling founders to focus fully on building and scaling the core business.
+          </p>
+        </div>
+        <div class="belief-col">
+     
+          <h4>Our Belief</h4>
+          <div class="belief-yellow-line"></div>
+          <p>
+            Strong ventures are not accidents. They are engineered through structured ecosystems and discipline that compounds over time. Altellect exists to build such ventures.
+          </p>
+        </div>
+      </div>
+    </section>
+    <style>
+    .belief-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  
+      background: #F2F2F2 0% 0% no-repeat padding-box;
+    }
+    .belief-row {
+      display: flex;
+  
+      max-width: 900px;
+      width: 100%;
+      padding: 32px 0;
+      justify-content: center;
+      align-items: stretch;
+    }
+    .belief-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+  
+      text-align: center;
+      padding: 0 32px;
+      justify-content: center;
+    }
+ 
+    .belief-col img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 4px solid #FDB913;
+      object-fit: cover;
+      margin-bottom: 16px;
+      background: #fff;
+    }
+    .belief-col h4 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-top: 0;
+      text-align: left;
+    }
+    .belief-yellow-line {
+         width: 350px;
+    height: 1px;
+    background: #FDB913;
+    margin: 0 0 17px 0;
+    border-radius: 2px;
+}
+    
+    .belief-col p {
+      font-size: 1rem;
+      color: #222;
+      margin: 0;
+      text-align:left;
+    }
+    @media (max-width: 900px) {
+      .belief-row {
+        flex-direction: column;
+        max-width: 98vw;
+        padding: 16px 0;
+      }
+ 
+      .belief-col {
+        padding: 16px 0;
+      }
+    }
+    </style>
   </div>
 </section>
-<!-- LEADERSHIP -->
-
-
 <section class="leadership-section">
   <div class="container">
     <h2 class="section-title">Leadership</h2>
     <div class="accent-line"></div>
+
     <p class="section-desc">
-      Altellect is led by a senior leadership team with experience across venture building, capital, strategy, brand and operations.
+      Altellect is led by a senior leadership team with experience across venture building, capital,
+      strategy, brand and operations.
     </p>
     <p class="section-desc">
-      The leadership team brings perspective, judgement, and long-term stewardship to every venture — guiding critical decisions, curating expertise, and ensuring consistency of intent across the ecosystem.
+      The leadership team brings perspective, judgement, and long-term stewardship to every venture.
     </p>
-    <div class="leadership-cards">
-      <div class="leader-card">
-        <div class="leader-img">
-          <img src="assets/Vijay.png" alt="Vijay Narayanan" />
+
+    <div class="slider-leadership">
+      <div class="slider-track">
+
+        <!-- ALL SLIDES MUST STAY INSIDE THIS TRACK -->
+
+        <!-- Slide 1 -->
+        <div class="slide">
+          <div class="leader-card">
+            <div class="leader-img">
+              <img src="assets/Vijay.png" alt="Vijay Narayanan" />
+            </div>
+            <div class="leader-info">
+              <h3>Vijay Naraayanan</h3>
+              <span class="leader-title">Chief Vision Officer</span>
+              <div class="leader-dash"></div>
+              <p class="leader-exp">30+ Yrs Of Leadership Experience.</p>
+              <p class="leader-journey"><strong>Professional Journey :</strong> Altellect , AweSpace.Ventures</p>
+            </div>
+          </div>
         </div>
-        <div class="leader-info">
-          <h3>Vijay Naraayanan</h3>
-          <span class="leader-title">Chief Vision Officer</span>
-          <div class="leader-dash"></div>
-          <p class="leader-exp">30+ Yrs Of Leadership Experience.</p>
-          <p class="leader-journey"><strong>Professional Journey :</strong> Altellect , AweSpace.Ventures</p>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <div class="leader-card">
+            <div class="leader-img">
+              <img src="assets/Ayaana.png" alt="Ayaana Khapre" />
+            </div>
+            <div class="leader-info">
+              <h3>Ayaana Khapre</h3>
+              <span class="leader-title">Chief Transformation Officer</span>
+              <div class="leader-dash"></div>
+              <p class="leader-exp">20+ Yrs Experience</p>
+              <p class="leader-journey"><strong>Professional Journey :</strong> AweSpace.Estate , Roqoqo Designs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+          <div class="leader-card">
+            <div class="leader-img">
+              <img src="assets/Girish-Nair.png" alt="Girish Nair" />
+            </div>
+            <div class="leader-info">
+              <h3>Girish Nair</h3>
+              <span class="leader-title">Chief Revenue Officer (CRO)</span>
+              <div class="leader-dash"></div>
+              <p class="leader-exp">30+ Yrs Of Leadership</p>
+              <p class="leader-journey"><strong>Professional Journey :</strong> Mahindra Holidays, Oxygen Resorts</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+          <div class="leader-card">
+            <div class="leader-img">
+              <img src="assets/Ranjeet.png" alt="Ranjeet" />
+            </div>
+            <div class="leader-info">
+              <h3>Ranjeet Suraj Singh</h3>
+              <span class="leader-title">Group CEO Venture Systems</span>
+              <div class="leader-dash"></div>
+              <p class="leader-exp">25+ Yrs</p>
+              <p class="leader-journey"><strong>Professional Journey :</strong> Vodafone, DishTV, Tata Tele</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide">
+          <div class="leader-card">
+            <div class="leader-img">
+              <img src="assets/Rajesh-Chalke.png" alt="Rajesh" />
+            </div>
+            <div class="leader-info">
+              <h3>Raajesh Chalke</h3>
+              <span class="leader-title">Financial Advisor</span>
+              <div class="leader-dash"></div>
+              <p class="leader-exp">30+ Yrs</p>
+              <p class="leader-journey"><strong>Professional Journey :</strong> Eros Media, Carnival Group</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide">
+          <div class="leader-card">
+            <div class="leader-img">
+              <img src="assets/anshuman.png" alt="Anshuman" />
+            </div>
+            <div class="leader-info">
+              <h3>Anshuman Agarwal</h3>
+              <span class="leader-title" style="color:#FDB913;">Chief Product Officer</span>
+              <div class="leader-dash"></div>
+              <p class="leader-exp">16+ Yrs Of High-Impact Product Leadership.</p>
+              <p class="leader-journey"><strong>Professional Journey :</strong> Amazon, Aon, Ernst &amp; Young, Standard Chartered Bank.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide">
+          <div class="leader-card">
+            <div class="leader-img">
+              <img src="assets/Supriya Upadhyay.png" />
+            </div>
+            <div class="leader-info">
+              <h3>Supriya Upadhyay</h3>
+              <span class="leader-title" style="color:#FDB913; display:inline-block; max-width:270px; line-height:1.2;">Head Of Technology &amp; AI Infrastructure Officer (CTAIO)</span>
+              <div class="leader-dash"></div>
+              <p class="leader-exp">17+ Yrs Of Strategic Leadership Exp.</p>
+              <p class="leader-journey"><strong>Professional Journey :</strong> Bytur Motors Pvt Ltd, Siance Software Pvt. Ltd.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide">
+          <div class="leader-card">
+            <div class="leader-img">
+              <img src="assets/Nivedita-Kannan.png" />
+            </div>
+            <div class="leader-info">
+              <h3>Nivedita Kannan</h3>
+              <span class="leader-title" style="color:#FDB913;">Chief Human Resource Officer</span>
+              <div class="leader-dash"></div>
+              <p class="leader-exp">20+ Yrs Of Strategic Human Capital Leadership.</p>
+              <p class="leader-journey"><strong>Professional Journey :</strong> The Loop, Mudrex, Hubilo.</p>
+            </div>
+          </div>
+        </div>
+     <!-- Slide 9 -->
+        <div class="slide">
+          <div class="leader-card">
+            <div class="leader-img">
+              <img src="assets/Sachin Bavkar.png" />
+            </div>
+            <div class="leader-info">
+              <h3>Sachin Bavkar</h3>
+              <span class="leader-title">Chief Design Officer</span>
+              <div class="leader-dash"></div>
+              <p class="leader-exp">30+ Yrs Of Brand Strategy, Visual Identity Exp.</p>
+              <p class="leader-journey"><strong>Professional Journey :</strong> D B & A, OrangeStone Designs, Leo Burnett, FITCH, Lowe Adventa, Mccann Erickson Worldgroup, DDB Mudra Group, Ogilvy.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="leader-card">
-        <div class="leader-img">
-          <img src="assets/Ayaana.png" alt="Ayaana Khapre" />
-        </div>
-        <div class="leader-info">
-          <h3>Ayaana Khapre</h3>
-          <span class="leader-title">Chief Transformation Officer</span>
-          <div class="leader-dash"></div>
-          <p class="leader-exp">20+ Yrs Of Multi-Disciplinary Leadership Exp.</p>
-          <p class="leader-journey"><strong>Professional Journey :</strong> AweSpace.Estate , Roqoqo Designs</p>
-        </div>
-      </div>
+
+      <!-- DOTS -->
+      <div class="slider-dots"></div>
+
     </div>
   </div>
 </section>
-
 <style>
+/* Leadership Slider 2-cards at a time */
+/* Leadership Slider: 2 cards visible, no horizontal scrollbar, centered */
 .slider-leadership {
   width: 100%;
   max-width: 900px;
   margin: 40px auto 0 auto;
   position: relative;
+  overflow: hidden;
+  padding-bottom: 32px;
 }
 .slider-track {
   display: flex;
-  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+  transition: transform 0.6s cubic-bezier(.77,0,.18,1);
+  will-change: transform;
+  scrollbar-width: none;
   width: 100%;
-  justify-content: center;
-  align-items: stretch;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.slider-track::-webkit-scrollbar {
+  display: none;
 }
 .slide {
-  background: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+
+
   display: flex;
   align-items: center;
   padding: 32px 36px;
-  min-width: 340px;
-  max-width: 420px;
+  min-width: 48%;
+  max-width: 48%;
   text-align: left;
-  margin: 0 16px;
+  margin: 0 1%;
   opacity: 0.5;
   transform: scale(0.96);
   transition: all 0.4s cubic-bezier(.77,0,.18,1);
+  box-sizing: border-box;
 }
-.slide.active {
+.slide.active, .slide.active2 {
   opacity: 1;
   transform: scale(1);
   z-index: 2;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+
+}
+@media (max-width: 900px) {
+  .slider-track {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+  }
+  .slide {
+    margin: 0 0 18px 0;
+    min-width: 90vw;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 900px) {
+  .slider-track {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    width: 100%;
+  }
+  .slide {
+    margin: 0 0 18px 0;
+    min-width: 90vw;
+    max-width: 98vw;
+  }
 }
 .leader-img {
   min-width: 100px;
@@ -201,11 +442,11 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 4px solid #FDB913;
+  border: 0px solid #FDB913;
   overflow: hidden;
   margin-right: 24px;
   background: #fff;
-  display: flex;
+  display: flow-root;
   align-items: center;
   justify-content: center;
 }
@@ -233,11 +474,11 @@
   margin: 8px 0 10px 0;
 }
 .leader-exp {
-  font-size: 0.98rem;
+  font-size: 12px;
   margin-bottom: 4px;
 }
 .leader-journey {
-  font-size: 0.98rem;
+  font-size: 12px;
   margin-bottom: 0;
 }
 .slider-dots {
@@ -270,29 +511,57 @@
   }
 }
 </style>
+
 <script>
+const slides = document.querySelectorAll(".slide");
+const slidesPerView = 2;
+const totalDots = Math.ceil(slides.length / slidesPerView);
+const dotsContainer = document.querySelector(".slider-dots");
 let currentSlideIdx = 0;
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-function showSlide(idx) {
+
+// Create dots dynamically
+for (let i = 0; i < totalDots; i++) {
+  const dot = document.createElement("span");
+  dot.classList.add("dot");
+  if (i === 0) dot.classList.add("active");
+  dot.addEventListener("click", () => showSlides(i));
+  dotsContainer.appendChild(dot);
+}
+
+const dots = document.querySelectorAll(".dot");
+
+function showSlides(idx) {
   slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === idx);
-    dots[i].classList.toggle('active', i === idx);
+    slide.classList.remove("active", "active2");
+    if (i >= idx * slidesPerView && i < idx * slidesPerView + slidesPerView) {
+      slide.style.display = "flex";
+      if (i === idx * slidesPerView) slide.classList.add("active");
+      if (i === idx * slidesPerView + 1) slide.classList.add("active2");
+    } else {
+      slide.style.display = "none";
+    }
   });
+
+  dots.forEach((dot, i) => dot.classList.toggle("active", i === idx));
   currentSlideIdx = idx;
 }
+
 setInterval(() => {
-  let next = (currentSlideIdx + 1) % slides.length;
-  showSlide(next);
+  let next = (currentSlideIdx + 1) % totalDots;
+  showSlides(next);
 }, 5000);
+
+showSlides(0);
 </script>
 
 <!-- CTA -->
-<section class="cta">
-  <div class="container">
-    <button class="cta-btn">LET’S CONNECT!</button>
+<section class="cta-wrap">
+  <div class="cta-inner" style="flex-direction: column; align-items: center; background: #fff; box-shadow: none; padding: 48px 0 40px 0; max-width: 100vw;">
+    <h2 class="cta-title" style="font-family: 'Roboto', 'Montserrat', Arial, sans-serif; font-size: 32px; font-weight: 700; color: #111; margin-bottom: 32px; text-align: center;">Your Vision Deserves A Dedicated Partner.</h2>
+    <button class="cta-btn" style="background: #666; color: #fff; font-family: 'Roboto', 'Montserrat', Arial, sans-serif; font-size: 20px; font-weight: 700; padding: 12px 48px; border: none; border-radius: 0; box-shadow: none; letter-spacing: 1px;">LET’S CONNECT!</button>
   </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer class="footer">
