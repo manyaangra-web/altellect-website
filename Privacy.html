@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><img src="assets/Logo.png" alt="Altellect" style="height:1em;vertical-align:middle;"> Privacy Policy – Altellect</title>
+    <title>Privacy Policy – Altellect</title>
     <link rel="icon" type="image/png" href="assets/Logo.png" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -11,34 +11,35 @@
 </head>
 <body>
 
-<!-- HEADER (same as other pages) -->
-<header class=" header">
-  <div class="header-container container">
-    <div class="logo-wrap">
-      <img src="assets/Logo.png" alt="Altellect" />
- 
-    </div>
 
-    <nav class="nav">
-      <a class="active" href="index.html">Home</a>
-      <a href="about-us.html">About Us</a>
-      <a href="Projects.html">Projects</a>
-      <a href="capital.html">Altellect Capital</a>
-      <a href="carrers.html">Careers</a>
-     
-      <a href="contact.html">Contact Us</a>
-    </nav>
+    <!-- HEADER (copied from about-us.html for consistency) -->
+    <header class="header">
+        <div class="header-container container">
+            <div class="logo-wrap">
+                <img src="assets/Logo.png" alt="Altellect" />
+            </div>
+            <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="about-us.html">About Us</a>
+                    <a href="Projects.html">Projects</a>
+                    <a href="capital.html">Altellect Capital</a>
+                    <a href="carrers.html">Careers</a>
+                    <a href="contact.html">Contact Us</a>
+            </nav>
+                <a class="join-btn" href="join.html">Join The Ecosystem</a>
+        </div>
+    </header>
 
-     <a class="join-btn" href="join.html">Join The Ecosystem</a>
-        <title><img src="assets/Logo.png" alt="Altellect" style="height:1em;vertical-align:middle;"> Altellect</title>
-        <link rel="icon" type="image/png" href="assets/Logo.png" />
-</header>
+<!-- HERO (structure and style similar to about-us.html) -->
+<section class="about-hero" style="position:relative;background:url('assets/Privacy-Poicy-banner.png') center/cover no-repeat;min-height:380px;height:60vh;display:flex;align-items:flex-end;">
+  <div class="about-hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.45);"></div>
+  <div class="about-hero-content" style="position:relative;z-index:2;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-bottom:40px;">
+
+    <div class="about-hero-subtitle" style="color:#fff;font-size:2.1rem;font-family:'Roboto',sans-serif;text-align:center;max-width:700px;text-shadow:0 1px 8px rgba(0,0,0,0.18);margin-bottom:10px;">Respecting Your Digital Boundaries.</div>
+  </div>
+</section>
 
 <main class="privacy-main">
-    <section class="privacy-hero">
-        <img src="assets/privacy-hero.jpg" alt="Respecting Your Digital Boundaries." class="privacy-hero-img">
-        <div class="privacy-hero-title">Respecting Your Digital Boundaries.</div>
-    </section>
     <section class="privacy-content-section">
         <div class="privacy-content-box">
             <h2>ALTELLECT – PRIVACY POLICY</h2>
@@ -61,15 +62,17 @@
     </section>
 </main>
 
-<!-- HERO BANNER SECTION (as shown in screenshot, after privacy-main) -->
-<section class="privacy-hero-banner" style="background:#3C3B3B; width:100vw; min-height:60px; padding:0; margin:0; display:flex; align-items:center; justify-content:center;">
-    <div style="width:100%; max-width:900px; margin:0 auto; padding:32px 0; text-align:center;">
-        <h3 style="font-family:'Roboto',sans-serif; font-size:1.4rem; font-weight:700; color:#fff; margin-bottom:18px;">Your Vision Deserves A Dedicated Partner.</h3>
-        <a href="#" class="join-btn" style="background:#6A6A6A; color:#fff; font-family:'Roboto', 'Montserrat', Arial, sans-serif; font-size:16px; font-weight:700; padding:10px 0; width:160px; border:none; border-radius:0; box-shadow:none; letter-spacing:1px; text-align:center; display:inline-block; text-decoration:none;">LET'S CONNECT!</a>
-    </div>
-</section>
+
+<!-- HERO BANNER SECTION (call-to-action, as in other pages) -->
+
 </main>
 
+<section class="cta-wrap">
+  <div class="cta-inner" style="flex-direction: column; align-items: center; background: #fff; box-shadow: none; padding: 48px 0 40px 0; max-width: 100vw;">
+    <h2 class="cta-title" style="font-family: 'Roboto', 'Montserrat', Arial, sans-serif; font-size: 32px; font-weight: 700; color: #111; margin-bottom: 32px; text-align: center;">Your Vision Deserves A Dedicated Partner.</h2>
+    <button class="cta-btn" style="background: #666; color: #fff; font-family: 'Roboto', 'Montserrat', Arial, sans-serif; font-size: 20px; font-weight: 700; padding: 12px 48px; border: none; border-radius: 0; box-shadow: none; letter-spacing: 1px;">LET’S CONNECT!</button>
+  </div>
+</section>
 <!-- FOOTER (same as other pages) -->
 <footer class="footer">
     <div class="container footer-grid">
@@ -104,7 +107,7 @@
     </div>
     <div class="footer-bottom container">
         <span>Copyright © 2026 Altellect | All rights reserved.</span>
-        <a href="#">Privacy Policy</a>
+        <a href="Privacy.html">Privacy Policy</a>
     </div>
 </footer>
 
