@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us – Altellect</title>
+  <title><img src="assets/Logo.png" alt="Altellect" style="height:1em;vertical-align:middle;"> About Us – Altellect</title>
   <link rel="icon" type="image/png" href="assets/Logo.png" />
 
   <!-- Fonts -->
@@ -15,7 +15,7 @@
 <body>
   <!-- HEADER -->
   <header class="header">
-    <div class="header-container">
+    <div class="header-container container">
       <div class="logo-wrap">
         <img src="assets/Logo.png" alt="Altellect" />
       </div>
@@ -25,7 +25,7 @@
           <a href="Projects.html">Projects</a>
           <a href="capital.html">Altellect Capital</a>
           <a href="carrers.html">Careers</a>
-          <a href="Apply-now.html">Join our team</a>
+    
           <a href="contact.html">Contact Us</a>
       </nav>
         <a class="join-btn" href="join.html">Join The Ecosystem</a>
@@ -35,9 +35,19 @@
 <section class="about-hero">
   <div class="about-hero-overlay"></div>
   <div class="about-hero-content">
-    <h1 class="about-hero-title">One Ecosystem. Infinite Potential.</h1>
+      <h1 class="about-hero-title" style="color:#fff;font-size:2rem;font-family:'Montserrat',sans-serif;text-align:center;width:100%;text-shadow:0 2px 16px rgba(0,0,0,0.25);margin:0 0 40px 0;">About Altellect</h1>
   </div>
 </section>
+<style>
+  .about-hero {
+    position: relative;
+    background: url('assets/Mask Group 15.png') center/cover no-repeat;
+    min-height: 380px;
+    height: 60vh;
+    display: flex;
+    align-items: flex-end;
+  }
+</style>
 
 
 <section class="about-ecosystem">
@@ -382,7 +392,8 @@
   transition: transform 0.6s cubic-bezier(.77,0,.18,1);
   will-change: transform;
   scrollbar-width: none;
-  width: 100%;
+  width: 1220px;
+  max-width: 100vw;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -390,15 +401,13 @@
   display: none;
 }
 .slide {
-
-
   display: flex;
   align-items: center;
   padding: 32px 36px;
-  min-width: 48%;
-  max-width: 48%;
+  min-width: 600px;
+  max-width: 600px;
   text-align: left;
-  margin: 0 1%;
+  margin: 0;
   opacity: 0.5;
   transform: scale(0.96);
   transition: all 0.4s cubic-bezier(.77,0,.18,1);
@@ -592,7 +601,7 @@ showSlides(0);
       <h5>Company</h5>
       <a href="#">Home</a>
       <a href="#">About Us</a>
-      <a href="#">Join The Ecosystem</a>
+
       <div class="socials">
         <a href="#">f</a>
         <a href="#">in</a>

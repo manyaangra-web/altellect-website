@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Join – Altellect</title>
+    <title><img src="assets/Logo.png" alt="Altellect" style="height:1em;vertical-align:middle;"> Join – Altellect</title>
     <link rel="icon" type="image/png" href="assets/Logo.png" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -13,51 +13,109 @@
 
 <!-- HEADER (same as other pages) -->
 <header class="header">
-    <div class="header-container">
+    <div class="header-container container">
         <div class="logo-wrap">
             <img src="assets/Logo.png" alt="Altellect" />
         </div>
         <nav class="nav">
-              <a href="index.html">Home</a>
-              <a href="about-us.html">About Us</a>
-              <a href="Projects.html">Projects</a>
-              <a href="capital.html">Altellect Capital</a>
-              <a href="carrers.html">Careers</a>
-              <a href="Apply-now.html">Join our team</a>
-              <a href="contact.html">Contact Us</a>
+              <a href="index.html" class="nav-link">Home</a>
+              <a href="about-us.html" class="nav-link">About Us</a>
+              <a href="Projects.html" class="nav-link">Projects</a>
+              <a href="capital.html" class="nav-link nav-capital">Altellect Capital</a>
+              <a href="carrers.html" class="nav-link">Careers</a>
+              <a href="contact.html" class="nav-link">Contact Us</a>
+              <span class="nav-slider"></span>
         </nav>
            <a class="join-btn" href="join.html">Join The Ecosystem</a>
     </div>
 </header>
 
+<script>
+// Navigation slider underline effect
+document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.querySelector('.nav');
+    const links = nav.querySelectorAll('.nav-link');
+    const slider = nav.querySelector('.nav-slider');
+    function setSlider(link) {
+        const rect = link.getBoundingClientRect();
+        const navRect = nav.getBoundingClientRect();
+        slider.style.left = (link.offsetLeft) + 'px';
+        if(link.classList.contains('nav-capital')) {
+            slider.style.width = '120px'; // wider for Altellect Capital
+            slider.style.height = '4px'; // thicker for Altellect Capital
+        } else {
+            slider.style.width = '96px'; // default width for others
+            slider.style.height = '2px';
+        }
+        slider.style.top = (link.offsetTop + link.offsetHeight + 2) + 'px';
+    }
+    // Set initial slider position to active or first link
+    let active = nav.querySelector('.nav-link.active') || links[0];
+    setSlider(active);
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => setSlider(link));
+        link.addEventListener('focus', () => setSlider(link));
+    });
+    nav.addEventListener('mouseleave', () => setSlider(active));
+});
+</script>
+<style>
+.nav {
+    position: relative;
+}
+.nav-slider {
+    position: absolute;
+    height: 2px;
+    background: var(--yellow, #FDB913);
+    border-radius: 2px;
+    transition: left 0.3s cubic-bezier(0.4,0,0.2,1), width 0.3s cubic-bezier(0.4,0,0.2,1), height 0.3s cubic-bezier(0.4,0,0.2,1);
+    bottom: 0;
+    z-index: 2;
+}
+.nav-link {
+    position: relative;
+    padding-bottom: 8px;
+    text-decoration: none;
+    color: inherit;
+}
+.nav-link.active {
+    font-weight: bold;
+}
+</style>
 <main class="join-main">
-    <section class="join-hero">
-        <img src="assets/join-hero.jpg" alt="Founders, Capital and Leadership." class="join-hero-img">
-        <div class="join-hero-title">Founders, Capital and Leadership.</div>
-    </section>
-    <section class="join-content-section">
-        <div class="join-content-box join-content-box-table">
-            <div class="join-content-img-wrap">
-                <img src="assets/join-content.jpg" alt="Join the Engine" class="join-content-img">
+        <!-- HERO/BANNER SECTION -->
+        <section class="about-hero join-hero" style="position:relative; background:url('assets/join-hero.jpg') center/cover no-repeat; min-height:340px; height:340px; display:flex; align-items:flex-end;">
+            <div class="about-hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.32);"></div>
+            <div class="about-hero-content" style="position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;">
+                <h1 class="about-hero-title" style="color:#fff;font-size:2rem;font-family:'Montserrat',sans-serif;text-align:center;width:100%;text-shadow:0 2px 16px rgba(0,0,0,0.25);margin:0 0 40px 0;">Founders, Capital and Leadership.</h1>
             </div>
-            <div class="join-table-box">
-                <h2 class="join-table-title">Join the Engine<br>That Builds the Future</h2>
-                <div class="join-table-subtext">Altellect is always seeking:</div>
-                <table class="join-table">
-                    <tr><td><b>Founder</b></td><td>Pitch a new venture or lead an in-house build</td></tr>
-                    <tr><td><b>Operator</b></td><td>500+ Expert Operations & Advisors</td></tr>
-                    <tr><td><b>Technologist</b></td><td>500+ Expert Operators & Advisors</td></tr>
-                    <tr><td><b>Investor</b></td><td>Access curated deal flow and scale-stage opportunities</td></tr>
-                    <tr><td><b>Expert / Vendor</b></td><td>Contribute as a domain specialist or build partner</td></tr>
-                </table>
-                <a href="Apply-now.html" class="join-table-btn">APPLY NOW</a>
+        </section>
+
+        <!-- Two-column section -->
+        <section class="join-content-row" style="max-width:1000px; margin:40px auto 0 auto; display:flex; flex-wrap:wrap; background:#fff; box-shadow:0 2px 16px rgba(0,0,0,0.03); border-radius:0;">
+            <div class="join-content-img" style="flex:1 1 340px; min-width:320px;">
+                <img src="assets/join-content.jpg" alt="Join Altellect" style="width:100%; max-width:420px; border-radius:0; box-shadow:0 2px 16px rgba(0,0,0,0.07);">
             </div>
-        </div>
-    </section>
-    <section class="contact-cta">
-        <h3>Your Vision Deserves A Dedicated Partner.</h3>
-        <a href="#" class="join-btn">LET'S CONNECT!</a>
-    </section>
+            <div class="join-content-box" style="flex:1 1 340px; min-width:320px; padding:40px 32px 32px 40px; display:flex; flex-direction:column; justify-content:center;">
+                <h2 class="join-content-title" style="font-size:2rem; font-family:'Montserrat',sans-serif; font-weight:700; margin:0 0 18px 0; line-height:1.2;">Join the Engine<br>That Builds the Future</h2>
+                <ul class="join-content-list" style="font-size:1.08rem; color:#222; margin-bottom:18px;">
+                    <li><strong>Founder:</strong> Pitch a new venture or lead a new build</li>
+                    <li><strong>Operator:</strong> Join as Operator & Advisor</li>
+                    <li><strong>Technologist:</strong> Help power Operations & AI solutions</li>
+                    <li><strong>Investor:</strong> Access curated deal flow and scale-up opportunities</li>
+                    <li><strong>Expert:</strong> Contribute as a domain specialist or collaborator</li>
+                </ul>
+                <a href="Apply-now.html" class="join-btn-main" style="background:#666; color:#fff; font-family:'Roboto', 'Montserrat', Arial, sans-serif; font-size:18px; font-weight:700; padding:12px 32px; border:none; border-radius:0; box-shadow:none; letter-spacing:1px; text-align:center; margin-top:8px;">APPLY NOW</a>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-wrap">
+            <div class="cta-inner" style="flex-direction: column; align-items: center; background: #fff; box-shadow: none; padding: 48px 0 40px 0; max-width: 100vw;">
+                <h2 class="cta-title" style="font-family: 'Roboto', 'Montserrat', Arial, sans-serif; font-size: 32px; font-weight: 700; color: #111; margin-bottom: 32px; text-align: center;">Your Vision Deserves A Dedicated Partner.</h2>
+                <button class="cta-btn" style="background: #666; color: #fff; font-family: 'Roboto', 'Montserrat', Arial, sans-serif; font-size: 20px; font-weight: 700; padding: 12px 48px; border: none; border-radius: 0; box-shadow: none; letter-spacing: 1px;">LET’S CONNECT!</button>
+            </div>
+        </section>
 </main>
 
 <!-- FOOTER (same as other pages) -->
@@ -85,7 +143,7 @@
             <h5>Company</h5>
             <a href="#">Home</a>
             <a href="#">About Us</a>
-            <a href="#">Join The Ecosystem</a>
+
             <div class="socials">
                 <a href="#">f</a>
                 <a href="#">in</a>

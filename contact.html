@@ -13,7 +13,7 @@
 
 <!-- HEADER (copied from index.html) -->
 <header class="header">
-	<div class="header-container">
+	<div class="header-container container">
 		<div class="logo-wrap">
 			<img src="assets/Logo.png" alt="Altellect" />
 		</div>
@@ -23,8 +23,8 @@
 			<a href="Projects.html">Projects</a>
 			<a href="capital.html">Altellect Capital</a>
 			<a href="carrers.html">Careers</a>
-			<a href="Apply-now.html">Join our team</a>
-			<a class="active" href="contact.html">Contact Us</a>
+			<a href="contact.html" class="active">Contact Us</a>
+			
 		</nav>
 		<a class="join-btn" href="join.html">Join The Ecosystem</a>
 	</div>
@@ -33,60 +33,85 @@
 
 <!-- HERO/BANNER SECTION -->
 <section class="about-hero contact-hero" style="position:relative; background:url('assets/Contact-us-banner.png') center/cover no-repeat; min-height:340px; height:340px; display:flex; align-items:flex-end;">
-  <div class="about-hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.32);"></div>
-  <div class="about-hero-content" style="position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;">
-    <h1 class="about-hero-title" style="color:#fff;font-size:2rem;font-family:'Montserrat',sans-serif;text-align:center;width:100%;text-shadow:0 2px 16px rgba(0,0,0,0.25);margin:0 0 40px 0;">One Platform. Many Conversations.</h1>
-  </div>
+	<div class="about-hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.32);"></div>
+	<div class="about-hero-content" style="position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;">
+		<h1 class="about-hero-title" style="color:#fff;font-size:2rem;font-family:'Montserrat',sans-serif;text-align:center;width:100%;text-shadow:0 2px 16px rgba(0,0,0,0.25);margin:0 0 40px 0;">One Platform. Many Conversations.</h1>
+	</div>
 </section>
 
 
 <!-- MAIN CONTENT -->
 
-<main class="contact-main contact-main-new" style="background:#f7f7f7; padding-bottom:0;">
-	<section class="contact-content-row contact-content-row-v2" style="max-width:1000px; margin:40px auto 0 auto; display:flex; flex-wrap:wrap; background:#fff; box-shadow:0 2px 16px rgba(0,0,0,0.03); border-radius:0;">
-		<div class="contact-info-new contact-info-new-v2" style="flex:1 1 340px; min-width:320px; padding:40px 32px 32px 40px;">
-			<div class="contact-info-label">GET IN TOUCH</div>
-			<div class="contact-info-title contact-info-title-v2">Seamless Communication,<br>Global Impact.</div>
-			<div class="contact-info-block contact-info-block-v2">
-				<div class="contact-info-item contact-info-item-v2">
-					<div class="contact-info-item-label contact-info-item-label-v2">Location</div>
-					<div class="contact-info-item-value contact-info-item-value-v2">801, 8th Floor, Sea Breeze Building, Century Bazaar, Prabhadevi, Mumbai, Maharashtra 400025</div>
-				</div>
-				<div class="contact-info-item contact-info-item-v2">
-					<div class="contact-info-item-label contact-info-item-label-v2">Email</div>
-					<div class="contact-info-item-value contact-info-item-value-v2">info@altellect.com</div>
-				</div>
-				<div class="contact-info-item contact-info-item-v2">
-					<div class="contact-info-item-label contact-info-item-label-v2">Contact</div>
-					<div class="contact-info-item-value contact-info-item-value-v2">+91 9967806759</div>
-				</div>
-			</div>
-		</div>
-		<div class="contact-form-box-new contact-form-box-new-v2" style="flex:1 1 340px; min-width:320px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:32px 32px 32px 0;">
-			<div class="contact-form-title contact-form-title-v2">Send us a message</div>
-			<form class="contact-form-new contact-form-new-v2" style="width:100%; max-width:340px;">
-				<input type="text" placeholder="Name" required>
-				<input type="email" placeholder="Email" required>
-				<input type="text" placeholder="Subject" required>
-				<textarea placeholder="Message" rows="3" required></textarea>
-				<button type="submit" class="contact-form-btn-new contact-form-btn-new-v2">SEND MESSAGE</button>
-			</form>
+<main class="contact-main" style="background:#f2f2f2;">
+  <section class="contact-wrapper">
+    
+    <!-- LEFT INFO -->
+    <div class="contact-left">
+      <p class="small-label">GET IN TOUCH</p>
+      <h2 class="big-title">
+        Seamless Communication,<br>
+        Global Impact.
+      </h2>
+
+      <div class="info-item">
+        <img src="assets/Location-unit.png">
+        <div>
+          <h4>Location</h4>
+          <p>801, 8th Floor, Sea Breeze Building, Century Bazaar,<br>
+          Prabhadevi, Mumbai, Maharashtra 400025</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <img src="assets/Email-unit.png">
+        <div>
+          <h4>Email</h4>
+          <p>info@altellect.com</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <img src="assets/Telephone-unit.png">
+        <div>
+          <h4>Contact</h4>
+          <p>+91 9967806759</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+	<div class="contact-right" style="background:#fff; padding:32px 24px; border-radius:8px; box-shadow:0 2px 16px rgba(0,0,0,0.06);">
+      <h2 class="form-title">Send us a message</h2>
+
+      <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Subject">
+        <textarea placeholder="Message"></textarea>
+
+        <button type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+
+  </section>
+
+ <section class="social-row" style="background:#f2f2f2; padding:32px 0; text-align:center;">
+		<span style="font-size:1.1rem; font-weight:600; color:#222; display:block; margin-bottom:18px;">Connect with us</span>
+		<div class="line" style="width:60px; height:2px; background:#FDB913; margin:0 auto 18px auto;"></div>
+		<div class="icons" style="display:flex; justify-content:center; gap:24px;">
+			<img src="assets/Facebook-unit.png" alt="Facebook" style="height:32px;">
+			<img src="assets/Insta-unit@2x.png" alt="Instagram" style="height:32px;">
+			<img src="assets/LinkedIn-unit.png" alt="LinkedIn" style="height:32px;">
+			<img src="assets/WhatsApp-unit.png" alt="WhatsApp" style="height:32px;">
 		</div>
 	</section>
-	<section class="contact-social-row contact-social-row-v2" style="background:#fff; text-align:center; padding:24px 0 0 0;">
-		<div class="contact-social-label-new contact-social-label-new-v2" style="font-weight:600; margin-bottom:8px;">Connect with us</div>
-		<div class="contact-social-icons-new contact-social-icons-new-v2" style="display:inline-flex; gap:16px;">
-			<a href="#" class="contact-social-icon-new contact-social-icon-new-v2"><img src="assets/Facebook-unit.png" alt="Facebook"></a>
-			<a href="#" class="contact-social-icon-new contact-social-icon-new-v2"><img src="assets/Insta-unit@2x.png" alt="Instagram"></a>
-			<a href="#" class="contact-social-icon-new contact-social-icon-new-v2"><img src="assets/LinkedIn-unit.png" alt="LinkedIn"></a>
-			<a href="#" class="contact-social-icon-new contact-social-icon-new-v2"><img src="assets/WhatsApp-unit.png" alt="WhatsApp"></a>
-		</div>
-	</section>
-	<section class="contact-cta">
-		<h3>Your Vision Deserves A Dedicated Partner.</h3>
-		<a href="#" class="join-btn">LET'S CONNECT!</a>
-	</section>
+
+ 
+
+
+
 </main>
+
 
 <!-- FOOTER (copied from index.html) -->
 <footer class="footer">
@@ -113,7 +138,7 @@
 			<h5>Company</h5>
 			<a href="#">Home</a>
 			<a href="#">About Us</a>
-			<a href="#">Join The Ecosystem</a>
+
 			<div class="socials">
 				<a href="#">f</a>
 				<a href="#">in</a>
