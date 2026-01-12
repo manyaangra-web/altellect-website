@@ -242,84 +242,99 @@ html, body {
   align-items: center;
   margin-bottom: 18px;
 }
-/* How We Build Ventures Section (XD Spec) */
-.how-we-build {
-  background: #3A3A3A;
-  color: #fff;
-  padding: 64px 0 56px 0;
+.how-we-build{
+  background:#3c3c3b;
+  padding:90px 0 100px;
+  text-align:center;
 }
-.how-we-build .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+
+.how-we-build .container{
+  max-width:1100px;
+  margin:auto;
 }
-.how-we-build h2 {
-  font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 18px;
-  color: #fff;
+
+.how-we-build h2{
+  color:#fff;
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:10px;
 }
-.accent-line {
-  width: 100%;
-  max-width: 900px;
-  height: 2px;
-  /* Removed yellow background, only image border is yellow */
-  margin: 0 auto 32px auto;
+
+.hw-line{
+  width:120px;
+  height:2px;
+  background:#f2c318;
+  margin:10px auto 20px;
 }
-.how-we-build .subtitle {
-  font-family: 'Roboto', Arial, sans-serif;
-  font-size: 18px;
-  color: #fff;
-  margin-bottom: 32px;
-  line-height: 1.5;
+
+.hw-subtitle{
+  color:#d6d6d6;
+  font-size:14px;
+  line-height:22px;
+  max-width:780px;
+  margin:auto;
 }
-.how-we-build .subtitle span {
-  font-size: 18px;
-  color: #fff;
-  font-weight: 700;
+
+.hw-subtitle span{
+  display:block;
+  margin-top:10px;
+  font-weight:600;
+  color:#fff;
 }
-.build-grid {
-  display: flex;
-  justify-content: center;
-  gap: 48px;
-  margin-top: 32px;
+
+.hw-box-wrap{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:40px;
 }
-.build-item {
-  background: transparent;
-  color: #fff;
-  flex: 1 1 0;
-  max-width: 340px;
-  text-align: left;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 18px;
+
+.hw-box{
+  background:#2b2b2a;
+  padding:22px 25px 35px;
+  border-radius:4px;
+  border:1px solid rgba(255,255,255,.08);
+  position:relative;
 }
-.build-item .count-wrap {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 0;
+
+.hw-box h4{
+  color:#f2c318;
+  font-size:18px;
+  font-weight:700;
+  margin:0;
+  line-height:23px;
 }
-.count {
+
+.down-arrow{
+  color:#fff;
+  font-size:22px;
+  display:block;
+  margin-top:18px;
+}
+.box {
+  position: relative;
   display: inline-block;
-  background: #FDB913;
-  color: #fff;
-  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  width: 56px;
-  height: 56px;
-  border-radius: 8px;
-  text-align: center;
-  line-height: 56px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  margin-right: 0;
+  background: #3C3B3B;   /* dark box */
+  color: #FDB913;
+  padding: 24px 40px 30px;
+  border-radius: 4px;
+  margin: 0 12px;
 }
-.build-item > div:not(.count-wrap) {
-  flex: 1;
+
+.box::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    width: 37px;
+    height: 20px;
+    background: #ffffff;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
+
+
+
 @media (max-width: 900px) {
   .build-grid {
     flex-direction: column;
@@ -1672,7 +1687,7 @@ button{
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 6px;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Roboto';
 }
 
 /* ---------- YELLOW LINE ---------- */
@@ -3011,4 +3026,15 @@ tr{
   padding:0;         /* remove box spacing */
   border-radius:0;  
   margin-top:8px; /* remove rounding */
+}
+.full-map-section {
+  width: 100%;
+  height: 100vh;     /* full screen height */
+  position: relative;
+}
+
+.full-map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
