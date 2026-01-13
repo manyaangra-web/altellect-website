@@ -1,3 +1,48 @@
+/* Apply for Funding Button */
+.apply-funding-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #6A6A6A 0% 0% no-repeat padding-box;
+  color: #fff;
+  width: 210px;
+  height: 51px;
+  line-height: 51px;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  opacity: 1;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.apply-funding-btn:hover {
+  background: #555;
+}
+/* Intro Button Styling */
+.intro-btn {
+  width: 138px;
+  height: 51px;
+  background: #6A6A6A;
+  color: #fff;
+  opacity: 1;
+  font-size: 16px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: bold;
+  line-height: 28px;
+  letter-spacing: 0px;
+   opacity: 1;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.intro-btn:hover {
+  background: #FDB913;
+  color: #222;
+  opacity: 1;
+}
 html, body {
   overflow-x: hidden !important;
   width: 100vw;
@@ -326,9 +371,9 @@ html, body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -15px;
-    width: 37px;
-    height: 20px;
+    bottom: -5px;
+     width: 30px;
+    height: 12px;
     background: #ffffff;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
@@ -991,7 +1036,6 @@ button{
   margin-top: 0;
   padding: 36px 32px 32px 32px;
   display: flex;
-  gap: 32px;
   align-items: center;
 }
 .join-content-img-wrap {
@@ -1067,7 +1111,7 @@ button{
 @media (max-width: 900px) {
   .join-content-box {
     flex-direction: column;
-    gap: 18px;
+
     padding: 24px 4vw 18px 4vw;
   }
   .join-content-img-wrap, .join-form-box {
@@ -1293,7 +1337,7 @@ button{
 }
 /* ================= APPLY NOW PAGE ================= */
 .apply-main {
-
+background: #F2F2F2;
   min-height: 100vh;
   width: 100%;
   margin: 0;
@@ -1598,7 +1642,6 @@ button{
 .about-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.55) 100%);
   z-index: 1;
 }
 .about-hero-content {
@@ -2115,7 +2158,7 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  filter: grayscale(100%);
+  
 }
 
 .hero-overlay {
@@ -2124,15 +2167,15 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(17,17,17,0.55);
+
   z-index: 2;
 }
 
 .hero-content {
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 40px;
+  transform: translateX(-50%);
   z-index: 3;
   text-align: center;
 }
@@ -2142,6 +2185,7 @@ body {
   font-size: 52px;
   font-weight: 700;
   line-height: 1.2;
+  margin-bottom: 32px;
 }
 
 /* ================= BOTTOM STRIP ================= */
@@ -2149,7 +2193,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.55);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2212,21 +2256,13 @@ body {
   margin-bottom: 26px;
 }
 
-.intro-btn {
-  background: #6a6a6a;
-  color: #ffffff;
-  border: none;
-  font-size: 12px;
-  font-weight: 500;
-  padding: 10px 18px;
-  cursor: pointer;
-}
 
 /* RIGHT SIDE */
 .intro-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Montserrat';
 }
 
 .stat-block {
@@ -2268,7 +2304,7 @@ body {
 /* Divider */
 .stat-divider {
   height: 1px;
-  background: #dcdcdc;
+  border: 2px dashed #707070;
   margin: 30px 0;
 }
 
@@ -2295,7 +2331,7 @@ body {
 
 .capabilities-subtitle {
   font: normal normal normal 16px/24px Roboto;
-  color: #cfcfcf;
+  color: #fff;
   margin-bottom: 64px;
 }
 
@@ -2391,6 +2427,7 @@ body {
   letter-spacing: 1px;
   cursor: pointer;
   transition: background 0.2s;
+  text-decoration: none;
 }
 .cta-btn:hover {
   background: #444;
@@ -2738,7 +2775,7 @@ body {
 
   background: #F2F2F2 0% 0% no-repeat padding-box;
 
-  padding: 110px 0 100px;
+  padding: 60px 0 60px;
   text-align: center;
 }
 
@@ -2877,25 +2914,20 @@ table{
 }
 
 tr{
-  border-bottom:1.5px solid #bdbdbd;
+  border-bottom:1.5px solid #000;
 }
 
 .role-title{
   width:28%;
   padding:22px 18px 22px 24px;
-  font-family:'Montserrat',sans-serif;
-  font-size:1.1rem;
+  font-family:'roboto';
+  font-size:16px;
   font-weight:700;
-  border-right:1.5px solid #bdbdbd;
+  border-right:3.5px solid #000;
   text-align:left;
 }
 
-.role-desc{
-  text-align:left;
-  padding:22px 18px;
-  font-size:1.03rem;
-  font-family:'Roboto',sans-serif;
-}
+
 
 .role-btn{
   width:140px;
@@ -2939,41 +2971,34 @@ tr{
 /* Table Box */
 .career-table-wrapper{
   background:#fff;
-  border:1.5px solid #bdbdbd;
+  border:3px solid #000;
   box-shadow:0 2px 16px rgba(0,0,0,0.06);
-  width:900px;
+  width:1200px;
   max-width:100%;
   margin:0 auto;
-}
 
+}
 /* Table */
 .career-table{
   width:100%;
   border-collapse:collapse;
-  font-family:'Roboto',sans-serif;
+  font-family:'Roboto';
+  border:2px solid #000;
 }
 
 .career-table tr{
-  border-bottom:1.5px solid #bdbdbd;
+  border-bottom:1px solid #000;
 }
 
 /* Title Column */
-.role-title{
-  width:28%;
-  font-weight:700;
-  font-size:1.13rem;
-  color:#222;
-  padding:22px 18px 22px 24px;
-  font-family:'Montserrat',sans-serif;
-  border-right:1.5px solid #bdbdbd;
-}
+
 
 /* Description Column With Divider + Space */
 .role-desc{
   color:#222;
   font-size:1.04rem;
   padding:22px 40px 22px 18px;
-  border-right:1.5px solid #bdbdbd;
+  border-right:3px solid #000
 }
 
 /* Button Column */
@@ -2988,7 +3013,7 @@ tr{
     background: #6A6A6A;
     color: #fff;
     font-family: 'Roboto';
-    font-size: 0.95rem;
+    font-size: 10px;
     font-weight: 600;
     padding: 5px 8px;
     letter-spacing: 1px;

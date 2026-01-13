@@ -1,3 +1,38 @@
+/* Projects Hero Section */
+.projects-hero {
+  position: relative;
+  background: url('assets/Group 7860.png') center/cover no-repeat;
+  min-height: 420px;
+  height: 420px;
+  display: flex;
+  align-items: flex-end;
+}
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.about-hero-title {
+  color: #fff;
+  font-size: 1.7rem;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  width: 100%;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.25);
+  margin: 0 0 40px 0;
+}
 /* Center-align last card if it's alone in the last row of a 3-column grid */
 .ventures-grid > .venture-card.horizontal-card:last-child:nth-child(3n+1) {
   grid-column: 2 / 3;
@@ -23,9 +58,7 @@
   align-items: center;
 }
 
-.venture-card.horizontal-card:hover {
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-}
+
 
 @media (max-width: 1100px) {
   .venture-card.horizontal-card {
@@ -76,19 +109,19 @@
 }
 /* Venture card title and description styling for compact look */
 .venture-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto';
   font-weight: 700;
-  font-size: 1.08rem;
-  color: #222;
+  font-size: 16px;
+  color: #000;
   margin-bottom: 6px;
-  line-height: 1.25;
+
 }
 
 .venture-desc {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.98rem;
-  color: #444;
-  line-height: 1.4;
+  font-family: 'Roboto';
+  font-size: 12px;
+  color: #000;
+
 }
 
 @media (max-width: 1100px) {
@@ -117,7 +150,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.7));
+
   z-index: 1;
 }
 .projects-hero-content {
@@ -145,9 +178,10 @@ background: #F2F2F2 0% 0% no-repeat padding-box;
 }
 .ventures-headline {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 32px;
   font-weight: 700;
   margin-bottom: 8px;
+  font-family: 'roboto';
 }
 .ventures-desc {
   text-align: center;
@@ -168,16 +202,8 @@ background: #F2F2F2 0% 0% no-repeat padding-box;
 .venture-icon {
   width: 48px; height: 48px; margin-bottom: 14px;
 }
-.venture-title {
-  font-size: 1.08rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: #222;
-}
-.venture-desc {
-  font-size: 0.98rem;
-  color: #555;
-}
+
+
 .projects-cta {
   text-align: center;
   padding: 48px 0 32px 0;
