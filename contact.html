@@ -83,11 +83,11 @@
 	<div class="contact-right" style="background:#fff; padding:32px 24px;  box-shadow:0 2px 16px rgba(0,0,0,0.06);">
       <h2 class="form-title">Send us a message</h2>
 
-      <form>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <input type="text" placeholder="Subject">
-        <textarea placeholder="Message"></textarea>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="subject" placeholder="Subject" required>
+        <textarea id="message" placeholder="Message" required></textarea>
 
         <button type="submit">SEND MESSAGE</button>
       </form>
@@ -176,6 +176,38 @@
 		<a href="Privacy.html">Privacy Policy</a>
 	</div>
 </footer>
+
+<script>
+  // Simple form submission handler
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        try {
+          const res = await fetch('http://51.20.5.188:8002/api/contact/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, subject, message })
+          });
+          if (res.ok) {
+            alert('Message sent successfully!');
+            form.reset();
+          } else {
+            alert('Failed to send message. Please try again.');
+          }
+        } catch (err) {
+          alert('Error connecting to server.');
+        }
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

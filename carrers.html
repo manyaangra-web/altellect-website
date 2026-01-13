@@ -136,88 +136,27 @@
     <div class="career-filters">
       <div>
         <label>Location :</label>
-          <select>
-            <option>Mumbai</option>
-            <option>Bangalore</option>
-            <option>Delhi NCR</option>
-            <option>Pune</option>
-            <option>Remote</option>
+          <select id="location-dropdown">
+            <option>Loading...</option>
           </select>
       </div>
       <div>
         <label>Functions :</label>
-        <select>
-          <option>Marketing</option>
+        <select id="department-dropdown">
+          <option>Loading...</option>
         </select>
       </div>
     </div>
 
     <div class="career-table-wrapper">
       <table class="career-table">
-        <tbody>
-
-          <tr>
-            <td class="role-title">Product Manager</td>
-            <td class="role-desc">
-              Be the co-pilot to our captain. Drive strategy, make ideas real, and help scale Altellect’s vision into impact.
-            </td>
-            <td class="role-btn">
-              <a href="#" class="view-role-btn">VIEW ROLE</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="role-title">Product Designer</td>
-            <td class="role-desc">
-              Be the visionary behind our products. Shape ideas into experiences people love, guide innovation, and turn concepts into realities.
-            </td>
-            <td class="role-btn">
-              <a href="#" class="view-role-btn">VIEW ROLE</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="role-title">Platform Product Lead</td>
-            <td class="role-desc">
-              Take the driver’s seat for growth. Build strategies, unlock opportunities, and keep Altellect’s engines running with confidence.
-            </td>
-            <td class="role-btn">
-              <a href="#" class="view-role-btn">VIEW ROLE</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="role-title">Product Design Lead</td>
-            <td class="role-desc">
-              Be the storyteller-in-chief. Spark demand, craft campaigns that connect, and make sure the world knows Altellect’s story.
-            </td>
-            <td class="role-btn">
-              <a href="#" class="view-role-btn">VIEW ROLE</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="role-title">Product Content Lead</td>
-            <td class="role-desc">
-              Be our compass in uncharted waters. Protect the vision, ensure we play fair, and give the business confidence to grow.
-            </td>
-            <td class="role-btn">
-              <a href="#" class="view-role-btn">VIEW ROLE</a>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="role-title">Lead - Data & AI</td>
-            <td class="role-desc">
-              The culture champion. Balance people and processes, keep the workplace buzzing, and make every detail add up to a happy team.
-            </td>
-            <td class="role-btn">
-              <a href="#" class="view-role-btn">VIEW ROLE</a>
-            </td>
-          </tr>
-
+        <tbody id="jobs-tbody">
+          <!-- Jobs will be dynamically inserted here -->
         </tbody>
       </table>
+    </div>
+    <!-- Contact Us Button (you can move this anywhere you want) -->
+    <div style="text-align:center; margin: 24px 0;">
     </div>
 
     <p class="career-footer" style="text-align:center;">
@@ -280,6 +219,331 @@
     <a href="Privacy.html">Privacy Policy</a>
   </div>
 </footer>
+
+<!-- Modal for job details -->
+<style>
+  /* Minimal modal styling */
+  #job-modal-overlay {
+    display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.45); justify-content: center; align-items: center;
+  }
+  #job-modal {
+    background: #fff; border-radius: 8px; max-width: 480px; width: 95vw; padding: 32px 24px 24px 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18); position: relative; font-family: 'Roboto',sans-serif;
+    animation: fadeIn 0.2s;
+  }
+  #job-modal h2 { margin-top: 0; font-size: 1.5rem; font-family: 'Montserrat',sans-serif; }
+  #job-modal .modal-section { margin-bottom: 16px; }
+  #job-modal .modal-label { font-weight: 600; color: #222; margin-bottom: 2px; }
+  #job-modal .modal-value { color: #444; margin-bottom: 8px; }
+  #job-modal .modal-btns { display: flex; gap: 16px; justify-content: flex-end; margin-top: 24px; }
+  #job-modal .modal-btn {
+    padding: 8px 24px; border: none; border-radius: 0; font-weight: 600; font-size: 1rem; cursor: pointer;
+  }
+  #job-modal .modal-btn.apply { background: #222; color: #fff; }
+  #job-modal .modal-btn.close { background: #eee; color: #222; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(24px);} to { opacity: 1; transform: none; } }
+</style>
+<div id="job-modal-overlay">
+  <div id="job-modal">
+    <div id="job-modal-content">
+      <!-- Job details will be injected here -->
+    </div>
+    <div class="modal-btns">
+      <button class="modal-btn apply" id="job-modal-apply-btn">Apply</button>
+      <button class="modal-btn close" id="job-modal-close-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Application Modal -->
+<style>
+  #apply-modal-overlay {
+    display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.45); justify-content: center; align-items: center;
+  }
+  #apply-modal {
+    background: #fff; border-radius: 8px; max-width: 480px; width: 95vw; padding: 32px 24px 24px 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18); position: relative; font-family: 'Roboto',sans-serif;
+    animation: fadeIn 0.2s;
+  }
+  #apply-modal h2 { margin-top: 0; font-size: 1.3rem; font-family: 'Montserrat',sans-serif; }
+  #apply-modal form { display: flex; flex-direction: column; gap: 14px; }
+  #apply-modal label { font-weight: 500; margin-bottom: 2px; }
+  #apply-modal input, #apply-modal textarea {
+    width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 0; font-size: 1rem;
+  }
+  #apply-modal textarea { min-height: 60px; }
+  #apply-modal .modal-btns { display: flex; gap: 16px; justify-content: flex-end; margin-top: 18px; }
+  #apply-modal .modal-btn {
+    padding: 8px 24px; border: none; border-radius: 0; font-weight: 600; font-size: 1rem; cursor: pointer;
+  }
+  #apply-modal .modal-btn.submit { background: #222; color: #fff; }
+  #apply-modal .modal-btn.close { background: #eee; color: #222; }
+  #apply-modal .modal-msg { margin: 8px 0 0 0; font-size: 0.98rem; }
+</style>
+<div id="apply-modal-overlay">
+  <div id="apply-modal">
+    <h2>Apply for this Job</h2>
+    <form id="job-apply-form" enctype="multipart/form-data" autocomplete="off">
+      <input type="hidden" name="job" id="apply-job-id" />
+      <label for="apply-full-name">Full Name*</label>
+      <input type="text" name="full_name" id="apply-full-name" required />
+
+      <label for="apply-email">Email*</label>
+      <input type="email" name="email" id="apply-email" required />
+
+      <label for="apply-phone">Phone Number*</label>
+      <input type="text" name="phone_number" id="apply-phone" required />
+
+      <label for="apply-resume">Resume* (PDF, DOC, etc.)</label>
+      <input type="file" name="resume" id="apply-resume" accept=".pdf,.doc,.docx,.rtf,.txt" required />
+
+      <label for="apply-cover-letter">Cover Letter</label>
+      <textarea name="cover_letter" id="apply-cover-letter" placeholder="Write a short cover letter..."></textarea>
+
+      <div class="modal-btns">
+        <button type="submit" class="modal-btn submit">Submit Application</button>
+        <button type="button" class="modal-btn close" id="apply-modal-close-btn">Cancel</button>
+      </div>
+      <div class="modal-msg" id="apply-modal-msg"></div>
+    </form>
+  </div>
+</div>
+
+
+<script>
+  // Fetch departments and populate the dropdown
+  document.addEventListener('DOMContentLoaded', function() {
+    const deptSelect = document.getElementById('department-dropdown');
+    const locSelect = document.getElementById('location-dropdown');
+    const jobsTbody = document.getElementById('jobs-tbody');
+    let jobsData = [];
+
+    // Helper to render jobs
+    function renderJobs() {
+      const selectedDept = deptSelect.value;
+      const selectedLoc = locSelect.value;
+      let filtered = jobsData.filter(job => job.is_active);
+
+      if (selectedDept) {
+        filtered = filtered.filter(job => job.function && String(job.function.id) === selectedDept);
+      }
+      if (selectedLoc) {
+        filtered = filtered.filter(job => job.location && String(job.location.id) === selectedLoc);
+      }
+
+      jobsTbody.innerHTML = '';
+      if (filtered.length === 0) {
+        jobsTbody.innerHTML = '<tr><td colspan="3" style="text-align:center;color:#888;">No jobs found.</td></tr>';
+        return;
+      }
+      filtered.forEach(job => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="role-title">${job.title}</td>
+          <td class="role-desc">${job.short_description}</td>
+          <td class="role-btn">
+            <a href="#" class="view-role-btn" data-jobid="${job.id}">VIEW ROLE</a>
+          </td>
+        `;
+        jobsTbody.appendChild(tr);
+      });
+
+      // Add click listeners for view-role-btn
+      jobsTbody.querySelectorAll('.view-role-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const jobId = btn.getAttribute('data-jobid');
+          openJobModal(jobId);
+        });
+      });
+    }
+
+    // Fetch departments
+    fetch('http://51.20.5.188:8002/api/departments/')
+      .then(response => response.json())
+      .then(data => {
+        deptSelect.innerHTML = '';
+        const defaultOpt = document.createElement('option');
+        defaultOpt.textContent = 'Select Department';
+        defaultOpt.value = '';
+        deptSelect.appendChild(defaultOpt);
+        data.forEach(dept => {
+          const opt = document.createElement('option');
+          opt.value = dept.id;
+          opt.textContent = dept.name;
+          deptSelect.appendChild(opt);
+        });
+      })
+      .catch(() => {
+        deptSelect.innerHTML = '<option>Error loading departments</option>';
+      });
+
+    // Fetch locations
+    fetch('http://51.20.5.188:8002/api/locations/')
+      .then(response => response.json())
+      .then(data => {
+        locSelect.innerHTML = '';
+        const defaultOpt = document.createElement('option');
+        defaultOpt.textContent = 'Select Location';
+        defaultOpt.value = '';
+        locSelect.appendChild(defaultOpt);
+        data.forEach(loc => {
+          const opt = document.createElement('option');
+          opt.value = loc.id;
+          opt.textContent = loc.name;
+          locSelect.appendChild(opt);
+        });
+      })
+      .catch(() => {
+        locSelect.innerHTML = '<option>Error loading locations</option>';
+      });
+
+    // Fetch jobs
+    function fetchJobs() {
+      fetch('http://51.20.5.188:8002/api/jobs/')
+        .then(response => response.json())
+        .then(data => {
+          jobsData = data;
+          renderJobs();
+        })
+        .catch(() => {
+          jobsTbody.innerHTML = '<tr><td colspan="3" style="text-align:center;color:#888;">Error loading jobs.</td></tr>';
+        });
+    }
+
+    // Listen for filter changes
+    deptSelect.addEventListener('change', renderJobs);
+    locSelect.addEventListener('change', renderJobs);
+
+    // Modal logic
+    const modalOverlay = document.getElementById('job-modal-overlay');
+    const modalContent = document.getElementById('job-modal-content');
+    const modalCloseBtn = document.getElementById('job-modal-close-btn');
+    const modalApplyBtn = document.getElementById('job-modal-apply-btn');
+
+    // Application modal logic
+    const applyModalOverlay = document.getElementById('apply-modal-overlay');
+    const applyModalCloseBtn = document.getElementById('apply-modal-close-btn');
+    const applyForm = document.getElementById('job-apply-form');
+    const applyJobIdInput = document.getElementById('apply-job-id');
+    const applyMsg = document.getElementById('apply-modal-msg');
+
+    let currentJobId = null;
+
+    function openJobModal(jobId) {
+      modalContent.innerHTML = '<div style="text-align:center;padding:32px 0;">Loading...</div>';
+      modalOverlay.style.display = 'flex';
+      currentJobId = jobId;
+      fetch(`http://51.20.5.188:8002/api/jobs/${jobId}`)
+        .then(res => res.json())
+        .then(data => {
+          const job = data.job;
+          modalContent.innerHTML = `
+            <h2>${job.title}</h2>
+            <div class="modal-section">
+              <div class="modal-label">Location:</div>
+              <div class="modal-value">${job.location ? job.location.name : '-'}</div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-label">Department:</div>
+              <div class="modal-value">${job.function ? job.function.name : '-'}</div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-label">Short Description:</div>
+              <div class="modal-value">${job.short_description || '-'}</div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-label">Responsibilities:</div>
+              <div class="modal-value">${data.responsibilities || '-'}</div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-label">Requirements:</div>
+              <div class="modal-value">${data.requirements || '-'}</div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-label">Nice to Have:</div>
+              <div class="modal-value">${data.nice_to_have || '-'}</div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-label">Experience Required:</div>
+              <div class="modal-value">${data.experience_required ? data.experience_required + ' years' : '-'}</div>
+            </div>
+          `;
+        })
+        .catch(() => {
+          modalContent.innerHTML = '<div style="color:#c00;text-align:center;padding:32px 0;">Error loading job details.</div>';
+        });
+    }
+
+    modalCloseBtn.addEventListener('click', function() {
+      modalOverlay.style.display = 'none';
+    });
+
+    modalApplyBtn.addEventListener('click', function() {
+      // Open application modal
+      modalOverlay.style.display = 'none';
+      openApplyModal(currentJobId);
+    });
+
+    // Application modal functions
+    function openApplyModal(jobId) {
+      applyForm.reset();
+      applyMsg.textContent = '';
+      applyJobIdInput.value = jobId;
+      applyModalOverlay.style.display = 'flex';
+    }
+
+    applyModalCloseBtn.addEventListener('click', function() {
+      applyModalOverlay.style.display = 'none';
+    });
+
+    applyModalOverlay.addEventListener('click', function(e) {
+      if (e.target === applyModalOverlay) applyModalOverlay.style.display = 'none';
+    });
+
+    // Handle application form submit
+    applyForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      applyMsg.textContent = '';
+      const formData = new FormData(applyForm);
+
+      fetch('http://51.20.5.188:8002/api/jobs/apply/', {
+        method: 'POST',
+        body: formData
+      })
+      .then(async res => {
+        if (res.ok) {
+          applyMsg.style.color = 'green';
+          applyMsg.textContent = 'Application submitted successfully!';
+          setTimeout(() => { applyModalOverlay.style.display = 'none'; }, 1200);
+        } else {
+          const data = await res.json();
+          applyMsg.style.color = 'red';
+          // Show first error message
+          let msg = 'Failed to submit application.';
+          if (typeof data === 'object') {
+            for (const key in data) {
+              if (data[key] && data[key][0]) {
+                msg = data[key][0];
+                break;
+              }
+            }
+          }
+          applyMsg.textContent = msg;
+        }
+      })
+      .catch(() => {
+        applyMsg.style.color = 'red';
+        applyMsg.textContent = 'Network error. Please try again.';
+      });
+    });
+
+    // Initial fetch
+    fetchJobs();
+  });
+</script>
 
 </body>
 </html>
