@@ -1134,7 +1134,7 @@ button{
   margin-top: 60px;
 }
 .funding-form h2 {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Roboto';
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 28px;
@@ -1217,16 +1217,16 @@ button{
   outline: none;
 }
 .funding-next {
-  width: 100%;
-  background: #393939;
+  width: 400px;
+  background: #6A6A6A;
   color: #fff;
   border: none;
-  border-radius: 4px;
   padding: 12px 0;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 500;
   cursor: pointer;
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
+  display: block;
   transition: background 0.2s, color 0.2s;
 }
 .funding-next:hover {
@@ -1340,19 +1340,18 @@ background: #F2F2F2;
   min-height: 100vh;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 50px;
 }
 .apply-section {
   max-width: 900px;
   margin: 0 auto;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+
   padding: 40px 32px 32px 32px;
   margin-top: 60px;
 }
 .apply-form h2 {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'roboto';
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 28px;
@@ -1360,6 +1359,7 @@ background: #F2F2F2;
 }
 .apply-form {
   width: 100%;
+  margin-top:0px;
 }
 .apply-grid {
   display: grid;
@@ -1408,18 +1408,19 @@ background: #F2F2F2;
   min-height: 38px;
 }
 .apply-submit {
-  width: 100%;
-  background: #393939;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 12px 0;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.2s, color 0.2s;
+    width: 400px;
+    background: #6A6A6A;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 10px auto 0 auto;
+    display: block;
+    transition: background 0.2s, color 0.2s;
 }
+
 .apply-submit:hover {
   background: #FDB913;
   color: #222;
@@ -1609,20 +1610,20 @@ background: #F2F2F2;
 }
 .contact-cta h3 {
   font-size: 1.3rem;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'roboto';
   font-weight: 700;
   margin-bottom: 12px;
 }
 .contact-cta .join-btn {
-  background: #393939;
-  color: #fff;
-  border-radius: 4px;
-  padding: 10px 32px;
-  font-size: 15px;
-  font-weight: 700;
-  margin-top: 10px;
-  display: inline-block;
-  transition: background 0.2s, color 0.2s;
+    background: #6A6A6A;
+    color: #fff;
+    padding: 10px 32px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background 0.2s, color 0.2s;
+    width: 323px;
 }
 .contact-cta .join-btn:hover {
   background: #FDB913;
@@ -2084,7 +2085,7 @@ body {
   left: 0;
   width: 100vw;
   z-index: 20;
-  background: #3C3B3B;
+  background: #777676;
   opacity: 1;
   height: 53px;
 }
