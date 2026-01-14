@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const navRect = nav.getBoundingClientRect();
         slider.style.left = (link.offsetLeft) + 'px';
         if(link.classList.contains('nav-capital')) {
-            slider.style.width = '120px'; // wider for Altellect Capital
-            slider.style.height = '4px'; // thicker for Altellect Capital
+            slider.style.width = '90px'; // wider for Altellect Capital
+            slider.style.height = '3px'; // thicker for Altellect Capital
         } else {
-            slider.style.width = '96px'; // default width for others
-            slider.style.height = '2px';
+            slider.style.width = '60px'; // default width for others
+            slider.style.height = '3px';
         }
         slider.style.top = (link.offsetTop + link.offsetHeight + 2) + 'px';
     }
