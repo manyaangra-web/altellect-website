@@ -1658,8 +1658,8 @@ background: #F2F2F2;
   text-align: center;
 }
 .about-hero-title {
-  font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
-  font-size: 44px;
+  font-family: 'Roboto';
+  font-size: 32px;
   font-weight: 700;
   color: #fff;
   text-align: center;
@@ -2150,7 +2150,7 @@ body {
 .hero {
   position: relative;
   width: 100vw;
-  height: 70vh;
+  height: 90vh;
   min-height: 380px;
   overflow: hidden;
 }
