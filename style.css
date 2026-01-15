@@ -2081,15 +2081,25 @@ body {
 }
 
  .header-two{
-  position: absolute;
+  position: fixed;
   top: 0; 
   left: 0;
   width: 100vw;
   z-index: 20;
-  background: #525151;
+  background: #525151bf;
   opacity: 1;
 
 }
+.header-three{
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100vw;
+  z-index: 20;
+  background: rgb(88 87 87 / 76%);
+}
+
+
 
 .header-container {
  
