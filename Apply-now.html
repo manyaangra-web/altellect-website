@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apply Now – Altellect</title>
-    <link rel="icon" type="image/png" href="assets/Logo.png" />
+    <link rel="icon" type="image/png" href="assets/fav-logo.png" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
@@ -15,7 +15,9 @@
 <header class="header-two">
     <div class="header-container container">
         <div class="logo-wrap">
-            <img src="assets/Logo.png" alt="Altellect" />
+                        <a href="index.html">
+                            <img src="assets/Logo.png" alt="Altellect" />
+                        </a>
         </div>
         <nav class="nav">
               <a href="index.html">Home</a>
@@ -33,7 +35,9 @@
 <main class="apply-main">
     <section class="apply-section">
         <form class="apply-form">
-            <h2>Apply Now</h2>
+                        <h2>Apply Now</h2>
+                        <hr style=" height: 3px; background: #FDB913; border: none; border-radius: 2px; margin: 16px auto 24px auto;">
+                      
             <div class="apply-grid">
                 <div class="apply-field">
                     <label for="name">Name*</label>
@@ -44,47 +48,61 @@
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="apply-field">
-                    <label for="contact">Contact Number*</label>
+                    <label for="contact">Phone Number*</label>
                     <input type="text" id="contact" name="contact" required>
                 </div>
                 <div class="apply-field">
-                    <label for="location">Location*</label>
+                    <label for="location">Linkedin Profile*</label>
                     <input type="text" id="location" name="location" required>
                 </div>
-                <div class="apply-field apply-field-full">
-                    <label for="role">Role you want to apply for*</label>
+                <div class="apply-field ">
+                    <label for="role">Current Role/Title*</label>
                     <input type="text" id="role" name="role" required>
                 </div>
-                <div class="apply-field apply-field-full">
-                    <label for="linkedin">LinkedIn Profile (URL)</label>
+                <div class="apply-field ">
+                    <label for="linkedin">Area of Interest</label>
                     <input type="url" id="linkedin" name="linkedin">
+                </div>
+                      <div class="apply-field apply-field-full">
+                    <label for="resume">Attach Resume (PDF, Max 5MB)</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf">
                 </div>
                 <div class="apply-field apply-field-full">
                     <label for="about">Describe yourself in a few lines*</label>
                     <textarea id="about" name="about" rows="2" required></textarea>
                 </div>
                 <div class="apply-field">
-                    <label for="notice">Notice Period (if any)</label>
+                    <label for="notice">Which venture (if Known)</label>
                     <input type="text" id="notice" name="notice">
                 </div>
                 <div class="apply-field">
-                    <label for="availability">Availability to Start*</label>
+                    <label for="availability">Availability / Start Date **</label>
                     <input type="text" id="availability" name="availability" required>
                 </div>
-                <div class="apply-field apply-field-full">
-                    <label for="resume">Attach Resume (PDF, Max 5MB)</label>
-                    <input type="file" id="resume" name="resume" accept=".pdf">
-                </div>
+          
                 <div class="apply-field apply-field-full">
                     <label for="referral">How did you hear about us?</label>
                     <input type="text" id="referral" name="referral">
                 </div>
                 <div class="apply-field apply-field-full">
-                    <label for="other">Anything else you'd like to share?</label>
+                    <label for="other">Any Links to Work (e.g., GitHub, Behance, Blog)</label>
+                    <textarea id="other" name="other" rows="2"></textarea>
+                </div>
+                      <div class="apply-field apply-field-full">
+                    <label for="other">Referral Name (If Any)</label>
                     <textarea id="other" name="other" rows="2"></textarea>
                 </div>
             </div>
-            <button type="submit" class="apply-submit">SUBMIT</button>
+                        <div style="margin-bottom: 0;">
+                            <div style="font-size: 16px; color: #222; font-family: 'Roboto', Arial, sans-serif; font-weight: 500; margin-bottom: 8px;">Please check the below box *</div>
+                            <label style="display: flex; align-items: center; gap: 12px; font-size: 16px; color: #222; font-family: 'Roboto', Arial, sans-serif; margin-bottom: 0;">
+                                <input type="checkbox" id="agree-contact" name="agree_contact" required style="width: 24px; height: 24px; accent-color: #222; border: 2px solid #222; border-radius: 4px; margin-right: 4px;">
+                                <span style="font-weight: 500;">I agree to be contacted</span>
+                            </label>
+                            <div style="width: 100%; border-bottom: 2px solid #FDB913; margin: 12px 0 24px 0;"></div>
+                        </div>
+                        
+                        <button type="submit" class="apply-submit">SEND</button>
         </form>
     </section>
     <section class="contact-cta">
@@ -97,7 +115,7 @@
 <footer class="footer">
     <div class="container footer-grid">
         <div class="footer-brand">
-            <img src="assets/logo.png" alt="Altellect Logo" class="footer-logo" />
+            <img src="assets/Logo.png" alt="Altellect Logo" class="footer-logo" />
             <p>
                 801, 8th Floor, Sea Breeze Building,<br>
                 Century Bazaar, Prabhadevi, Mumbai,<br>
@@ -106,22 +124,24 @@
         </div>
         <div>
             <h5>Menu</h5>
-            <a href="#">Projects</a>
-            <a href="#">Altellect Capital</a>
-            <a href="#">Careers</a>
+            <a href="Projects.html">Projects</a>
+            <a href="capital.html">Altellect Capital</a>
+            <a href="carrers.html">Careers</a>
         </div>
         <div>
             <h5>Support</h5>
-            <a href="#">Contact Us</a>
+            <a href="contact.html">Contact Us</a>
         </div>
         <div>
             <h5>Company</h5>
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="join.html">Join The Ecosystem</a>
             <div class="socials">
-                <a href="#">f</a>
-                <a href="#">in</a>
+                <a href="https://facebook.com/altellect" target="_blank" title="Facebook"><img src="assets/Facebook-icon.png" alt="Facebook" style="width:16px;height:16px;object-fit:contain;vertical-align:middle;"></a>
+                <a href="https://instagram.com/altellect.ventures/" target="_blank" title="Instagram"><img src="assets/Instagram-icon.png" alt="Instagram" style="width:16px;height:16px;object-fit:contain;vertical-align:middle;"></a>
+                <a href="https://linkedin.com/company/altellect/?viewAsMember=true" target="_blank" title="LinkedIn"><img src="assets/Linkedin-icon.png" alt="LinkedIn" style="width:16px;height:16px;object-fit:contain;vertical-align:middle;"></a>
+                <a href="https://wa.me/919820084506" target="_blank" title="WhatsApp"><img src="assets/Whatsapp-icon.png" alt="WhatsApp" style="width:16px;height:16px;object-fit:contain;vertical-align:middle;"></a>
             </div>
         </div>
     </div>

@@ -24,19 +24,18 @@
 /* Intro Button Styling */
 .intro-btn {
   width: 138px;
-  height: 51px;
   background: #6A6A6A;
   color: #fff;
   opacity: 1;
   font-size: 16px;
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: bold;
-  line-height: 28px;
   letter-spacing: 0px;
    opacity: 1;
   border: none;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+  padding:10px;
 }
 .intro-btn:hover {
   background: #FDB913;
@@ -75,7 +74,7 @@ html, body {
 .perks-benefits-section {
   background: #232323;
   color: #fff;
-  margin: 40px 0;
+  
   padding: 0;
 }
 .perks-benefits-header {
@@ -108,7 +107,7 @@ html, body {
 }
 .perks-benefits-title {
   font-size: 2.2rem;
-  font-family: 'Montserrat',sans-serif;
+  font-family: 'roboto';
   font-weight: 700;
   margin: 0 0 18px 0;
   line-height: 1.2;
@@ -122,17 +121,17 @@ html, body {
   margin-bottom: 0;
 }
 .perks-grid {
-  flex: 2 1 600px;
+  flex: 2 1 800px;
   min-width: 340px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px 24px;
   padding: 48px 48px 48px 36px;
-  background: #232323;
+  
 }
 .perk-item {
-  background: #323232;
-  border-radius: 8px;
+  
+  
   padding: 32px 18px 28px 18px;
   text-align: center;
   display: flex;
@@ -145,11 +144,11 @@ html, body {
   margin-bottom: 14px;
 }
 .perk-title {
-  color: #FDB913;
-  font-size: 1.08rem;
-  font-weight: 700;
-  margin-bottom: 7px;
-  font-family: 'Montserrat',sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 7px;
+    font-family: 'roboto';
+      white-space: nowrap;
 }
 .perk-desc {
   color: #e6e6e6;
@@ -356,22 +355,14 @@ html, body {
   display:block;
   margin-top:18px;
 }
-.box {
-  position: relative;
-  display: inline-block;
-  background: #3C3B3B;   /* dark box */
-  color: #FDB913;
-  padding: 24px 40px 30px;
-  border-radius: 4px;
-  margin: 0 12px;
-}
+
 
 .box::after {
     content: "";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -5px;
+    bottom: 1px;
      width: 30px;
     height: 12px;
     background: #ffffff;
@@ -587,6 +578,14 @@ body {
   font-size:28px;
   margin-bottom:25px;
 }
+.big-title::after {
+    content: "";
+    width: 400px;
+    height: 1px;
+    background: #D2A53C;
+    display: block;
+    margin-top: 10px;
+}
 
 
 .info-item{
@@ -615,7 +614,7 @@ body {
 .form-title::after{
   content:"";
   width:400px;
-  height:2px;
+  height:1px;
   background:#D2A53C;
   display:block;
   margin-top:10px;
@@ -625,7 +624,8 @@ form{
   margin-top:20px;
 }
 
-input,textarea{
+input, textarea {
+  font-family: 'Roboto';
   width:100%;
   border:1px solid #ddd;
   padding:10px;
@@ -738,7 +738,7 @@ button{
   gap: 12px;
 }
 .contact-info-label {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto';
   font-size: 13px;
   font-weight: 700;
   color: #222;
@@ -859,6 +859,7 @@ button{
   }
 }
 /* --- JOIN THE ECOSYSTEM TABLE LAYOUT --- */
+
 .join-content-box-table {
   display: flex;
   gap: 32px;
@@ -961,7 +962,7 @@ button{
     gap: 10px !important;
   }
   .join-content-img-wrap, .join-form-box {
-    max-width: 100%;
+    max-width: 50%;
     min-width: 0;
   }
   .join-form-box h3, .privacy-content-box h2, .apply-form h2, .funding-form h2 {
@@ -990,13 +991,14 @@ button{
 /* ================= JOIN THE ECOSYSTEM PAGE ================= */
 .join-main {
   background: #ededed;
-  min-height: 100vh;
+  padding:50px;
   width: 100%;
   margin: 0;
-  padding: 0;
 }
 .join-hero {
-  width: 100%;
+  width: 100vw;
+  height: 60vh;
+  min-height: 380px;
   background: #ededed;
   position: relative;
   margin-bottom: 0;
@@ -1034,7 +1036,7 @@ button{
   max-width: 800px;
   width: 100%;
   margin-top: 0;
-  padding: 36px 32px 32px 32px;
+  padding: 0px 20px 0px 20px;
   display: flex;
   align-items: center;
 }
@@ -1043,12 +1045,7 @@ button{
   min-width: 220px;
   max-width: 320px;
 }
-.join-content-img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
+
 .join-form-box {
   flex: 1;
   min-width: 220px;
@@ -1137,7 +1134,7 @@ button{
   margin-top: 60px;
 }
 .funding-form h2 {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Roboto';
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 28px;
@@ -1220,16 +1217,16 @@ button{
   outline: none;
 }
 .funding-next {
-  width: 100%;
-  background: #393939;
+  width: 400px;
+  background: #6A6A6A;
   color: #fff;
   border: none;
-  border-radius: 4px;
   padding: 12px 0;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 500;
   cursor: pointer;
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
+  display: block;
   transition: background 0.2s, color 0.2s;
 }
 .funding-next:hover {
@@ -1258,7 +1255,9 @@ button{
   padding: 0;
 }
 .privacy-hero {
-  width: 100%;
+  width: 100vw;
+  height: 60vh;
+  min-height: 380px;
   background: #ededed;
   position: relative;
   margin-bottom: 0;
@@ -1341,19 +1340,18 @@ background: #F2F2F2;
   min-height: 100vh;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 50px;
 }
 .apply-section {
   max-width: 900px;
   margin: 0 auto;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+
   padding: 40px 32px 32px 32px;
   margin-top: 60px;
 }
 .apply-form h2 {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'roboto';
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 28px;
@@ -1361,6 +1359,7 @@ background: #F2F2F2;
 }
 .apply-form {
   width: 100%;
+  margin-top:0px;
 }
 .apply-grid {
   display: grid;
@@ -1409,18 +1408,19 @@ background: #F2F2F2;
   min-height: 38px;
 }
 .apply-submit {
-  width: 100%;
-  background: #393939;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 12px 0;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.2s, color 0.2s;
+    width: 400px;
+    background: #6A6A6A;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 10px auto 0 auto;
+    display: block;
+    transition: background 0.2s, color 0.2s;
 }
+
 .apply-submit:hover {
   background: #FDB913;
   color: #222;
@@ -1459,7 +1459,9 @@ background: #F2F2F2;
 .contact-hero {
   background: #ededed;
   padding: 0;
-  width: 100%;
+  width: 100vw;
+  height: 60vh;
+  min-height: 380px;
   margin-bottom: 0;
 }
 .contact-hero-img {
@@ -1608,20 +1610,20 @@ background: #F2F2F2;
 }
 .contact-cta h3 {
   font-size: 1.3rem;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'roboto';
   font-weight: 700;
   margin-bottom: 12px;
 }
 .contact-cta .join-btn {
-  background: #393939;
-  color: #fff;
-  border-radius: 4px;
-  padding: 10px 32px;
-  font-size: 15px;
-  font-weight: 700;
-  margin-top: 10px;
-  display: inline-block;
-  transition: background 0.2s, color 0.2s;
+    background: #6A6A6A;
+    color: #fff;
+    padding: 10px 32px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background 0.2s, color 0.2s;
+    width: 323px;
 }
 .contact-cta .join-btn:hover {
   background: #FDB913;
@@ -1639,6 +1641,7 @@ background: #F2F2F2;
   }
 }
 
+
 .about-hero-overlay {
   position: absolute;
   inset: 0;
@@ -1655,8 +1658,8 @@ background: #F2F2F2;
   text-align: center;
 }
 .about-hero-title {
-  font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
-  font-size: 44px;
+  font-family: 'Roboto';
+  font-size: 32px;
   font-weight: 700;
   color: #fff;
   text-align: center;
@@ -1668,9 +1671,11 @@ background: #F2F2F2;
 }
 .about-hero {
   position: relative;
-  height: 570px;
+  height: 70vh;
+  min-height: 380px;
+  width: 100vw;
   background: transparent url('assets/Mask Group 15@2x.png') 0 0 no-repeat padding-box;
-  background-size: 1920px 570px;
+  background-size: cover;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -2008,18 +2013,18 @@ background: #F2F2F2;
   padding: 40px 0;
   text-align: center;
 }
-.cta-btn {
-  background: var(--white);
-  color: var(--dark);
+.cta-btn:hover {
+  background: #FDB913;
+  color: #222 ;
   border: none;
   padding: 14px 48px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
-  border-radius: 6px;
+  
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   width: 300px;
-  max-width: 90vw;
+
   display: block;
   margin: 0 auto;
 }
@@ -2065,25 +2070,36 @@ body {
 
 /* ================= HEADER ================= */
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #5c5b5b75;
+  opacity: 1;
+
+}
+
+ .header-two{
+  position: fixed;
+  top: 0; 
   left: 0;
   width: 100vw;
   z-index: 20;
-  background: transparent;
+  background: #525151bf;
   opacity: 1;
-  height: 53px;
+
 }
- .header-two {
-  position: absolute;
-  top: 0;
+.header-three{
+  position: fixed;
+  top: 0; 
   left: 0;
   width: 100vw;
   z-index: 20;
-  background: #3C3B3B;
-  opacity: 1;
-  height: 53px;
+  background: rgb(88 87 87 / 76%);
 }
+
+
 
 .header-container {
  
@@ -2125,7 +2141,7 @@ body {
     width: 65px;
     height: 2px;
     background: var(--yellow);
-    bottom: -12px;
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -2141,11 +2157,16 @@ body {
   text-decoration: none;
 }
 
+.join-btn.active {
+  background: #FDB913 !important;
+  color: #222 !important;
+}
+
 /* ================= HERO ================= */
 .hero {
   position: relative;
   width: 100vw;
-  height: 60vh;
+  height: 90vh;
   min-height: 380px;
   overflow: hidden;
 }
@@ -2393,17 +2414,18 @@ body {
   background: #fff;
   position: relative;
   z-index: 2;
-  margin: 0;
+
   padding: 0;
 }
 .cta-inner {
   background: #fff;
-  max-width: 100vw;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 48px 0 40px 0;
+  padding: 48px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   box-shadow: none;
 }
 .cta-title {
@@ -2428,10 +2450,14 @@ body {
   cursor: pointer;
   transition: background 0.2s;
   text-decoration: none;
+  width:300px;
 }
 .cta-btn:hover {
-  background: #444;
+  background: #FDB913 !important;
+  color: #222 !important;
+  transition: background 0.2s, color 0.2s;
 }
+
 
 /* FOOTER */
 .footer {
@@ -2578,10 +2604,7 @@ body {
 /* ================= ABOUT PAGE ================= */
 
 /* ABOUT HERO (reuses .hero but different height if needed) */
-.about-hero {
-  height: 70vh;
-  min-height: 520px;
-}
+
 
 .about-hero .hero-content h1 {
   font-size: 48px;
@@ -2861,7 +2884,7 @@ body {
 
 .careers-openings-section{
   background:#f7f7f7;
-  padding:40px 0 0 0;
+  padding:40px 0 40px 0;
 }
 
 .careers-container{
@@ -2872,8 +2895,8 @@ body {
 }
 
 .careers-container h2{
-  font-family:'Montserrat',sans-serif;
-  font-size:1.6rem;
+  font-family:'Roboto';
+  font-size:18px;
   font-weight:700;
   margin-bottom:24px;
 }
@@ -2923,21 +2946,17 @@ tr{
   font-family:'roboto';
   font-size:16px;
   font-weight:700;
-  border-right:3.5px solid #000;
+  border-right:2px solid #000;
   text-align:left;
+  border-top:1px solid#000;
+
 }
-
-
-
 .role-btn{
   width:140px;
   text-align:center;
+  border-top:1px solid #000;
 }
 
-.careers-openings-section{
-  background:#f7f7f7;
-  padding:40px 0 0 0;
-}
 
 .careers-container{
   max-width:1100px;
@@ -2971,7 +2990,7 @@ tr{
 /* Table Box */
 .career-table-wrapper{
   background:#fff;
-  border:3px solid #000;
+  border:1px solid #000;
   box-shadow:0 2px 16px rgba(0,0,0,0.06);
   width:1200px;
   max-width:100%;
@@ -2983,7 +3002,7 @@ tr{
   width:100%;
   border-collapse:collapse;
   font-family:'Roboto';
-  border:2px solid #000;
+  border:1px solid #000;
 }
 
 .career-table tr{
@@ -2998,14 +3017,12 @@ tr{
   color:#222;
   font-size:1.04rem;
   padding:22px 40px 22px 18px;
-  border-right:3px solid #000
+  border-right:2px solid #000;
+  border-top:1px solid #000;
 }
 
 /* Button Column */
-.role-btn{
-  text-align:center;
-  padding:40px;
-}
+
 
 
 .view-role-btn {
@@ -3062,4 +3079,72 @@ tr{
   width: 100%;
   height: 100%;
   border: none;
+  margin-top: 24px;
+  align-self: center;
+  min-width: 0;
+  padding: 14px 48px;
+  font-size: 20px;
+  font-family: 'Roboto', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  letter-spacing: 1px;
+  background: #666;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+
+.how-build-boxes{
+  display:flex;
+  justify-content:center;
+  gap:32px;
+  width:90%;
+  max-width:1100px;
+}
+
+.box{
+  background:#464646;
+  width:340px;
+  height:140px;
+  padding:18px 14px;
+  text-align:left;
+  color:#EAA704;
+  font-family:'Roboto',sans-serif;
+  position:relative;
+  overflow:hidden;
+  transition:height .35s ease;
+}
+
+/* Heading */
+.box h3{
+  margin:0 0 10px 0;
+  font-size:20px;
+  font-weight:700;
+}
+
+/* Polygon Arrow */
+
+/* Hidden Text */
+.box-text{
+  color:white;
+  font-size:14px;
+  margin-top:10px;
+  opacity:0;
+  transform:translateY(10px);
+  transition:all .35s ease;
+  text-align: left;
+}
+
+/* 🔥 Hover Effect — Open Like XD */
+.box:hover{
+  height:240px;
+}
+
+.box:hover .box-text{
+  opacity:1;
+  transform:translateY(0);
 }
