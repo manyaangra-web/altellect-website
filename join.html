@@ -28,62 +28,12 @@
               <a href="contact.html" class="nav-link">Contact Us</a>
               <span class="nav-slider"></span>
         </nav>
-           <a class="join-btn" href="join.html">Join The Ecosystem</a>
+           <a class="join-btn active" href="join.html">Join The Ecosystem</a>
     </div>
 </header>
 
-<script>
-// Navigation slider underline effect
-document.addEventListener('DOMContentLoaded', function() {
-    const nav = document.querySelector('.nav');
-    const links = nav.querySelectorAll('.nav-link');
-    const slider = nav.querySelector('.nav-slider');
-    function setSlider(link) {
-        const rect = link.getBoundingClientRect();
-        const navRect = nav.getBoundingClientRect();
-        slider.style.left = (link.offsetLeft) + 'px';
-        if(link.classList.contains('nav-capital')) {
-            slider.style.width = '90px'; // wider for Altellect Capital
-            slider.style.height = '3px'; // thicker for Altellect Capital
-        } else {
-            slider.style.width = '60px'; // default width for others
-            slider.style.height = '3px';
-        }
-        slider.style.top = (link.offsetTop + link.offsetHeight + 2) + 'px';
-    }
-    // Set initial slider position to active or first link
-    let active = nav.querySelector('.nav-link.active') || links[0];
-    setSlider(active);
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => setSlider(link));
-        link.addEventListener('focus', () => setSlider(link));
-    });
-    nav.addEventListener('mouseleave', () => setSlider(active));
-});
-</script>
-<style>
-.nav {
-    position: relative;
-}
-.nav-slider {
-    position: absolute;
-    height: 2px;
-    background: var(--yellow, #FDB913);
-    border-radius: 2px;
-    transition: left 0.3s cubic-bezier(0.4,0,0.2,1), width 0.3s cubic-bezier(0.4,0,0.2,1), height 0.3s cubic-bezier(0.4,0,0.2,1);
-    bottom: 0;
-    z-index: 2;
-}
-.nav-link {
-    position: relative;
-    padding-bottom: 8px;
-    text-decoration: none;
-    color: inherit;
-}
-.nav-link.active {
-    font-weight: bold;
-}
-</style>
+
+
 <section class="about-hero join-hero" style="position:relative; background:url('assets/Ecosystem-banner@2x.png') center/cover no-repeat; display:flex; align-items:flex-end;">
             <div class="about-hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;"></div>
             <div class="about-hero-content" style="position:relative;z-index:1;width:100%;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;">

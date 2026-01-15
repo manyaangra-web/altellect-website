@@ -2070,24 +2070,25 @@ body {
 
 /* ================= HEADER ================= */
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  z-index: 20;
-  background: transparent;
+  width: 100%;
+  z-index: 9999;
+  background: #5c5b5b75;
   opacity: 1;
-  height: 53px;
+
 }
- .header-two {
+
+ .header-two{
   position: absolute;
-  top: 0;
+  top: 0; 
   left: 0;
   width: 100vw;
   z-index: 20;
-  background: #777676;
+  background: #525151;
   opacity: 1;
-  height: 53px;
+
 }
 
 .header-container {
@@ -2130,7 +2131,7 @@ body {
     width: 65px;
     height: 2px;
     background: var(--yellow);
-    bottom: -12px;
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -2144,6 +2145,11 @@ body {
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
+}
+
+.join-btn.active {
+  background: #FDB913 !important;
+  color: #222 !important;
 }
 
 /* ================= HERO ================= */
