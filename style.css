@@ -1875,6 +1875,7 @@ background: #F2F2F2;
   position: absolute;
   inset: 0;
   z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
 }
 .about-hero-content {
   position: relative;
@@ -1903,7 +1904,7 @@ background: #F2F2F2;
   height: 70vh;
   min-height: 380px;
   width: 100vw;
-  background: transparent url('assets/Mask Group 15@2x.png') 0 0 no-repeat padding-box;
+  background: url('assets/Mask Group 15@2x.png') center center no-repeat;
   background-size: cover;
   display: flex;
   align-items: flex-end;
@@ -2851,6 +2852,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  .about-hero-overlay {
+    background: none !important;
+    opacity: 0 !important;
+  }
+  
   .header-container {
     padding: 12px 20px !important;
     display: flex !important;
