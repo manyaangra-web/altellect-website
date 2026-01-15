@@ -190,7 +190,7 @@
         const message = document.getElementById('message').value.trim();
 
         try {
-          const res = await fetch('http://51.20.5.188:8002/api/contact/', {
+          const res = await fetch('https://altellect.softwareapi/contact/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email, subject, message })
