@@ -377,7 +377,7 @@
     }
 
     // Fetch departments
-    fetch('http://51.20.5.188:8002/api/departments/')
+    fetch('https://altellect.software/api/departments/')
       .then(response => response.json())
       .then(data => {
         deptSelect.innerHTML = '';
@@ -397,7 +397,7 @@
       });
 
     // Fetch locations
-    fetch('http://51.20.5.188:8002/api/locations/')
+    fetch('https://altellect.software/api/locations/')
       .then(response => response.json())
       .then(data => {
         locSelect.innerHTML = '';
@@ -418,7 +418,7 @@
 
     // Fetch jobs
     function fetchJobs() {
-      fetch('http://51.20.5.188:8002/api/jobs/')
+      fetch('https://altellect.software/api/jobs/')
         .then(response => response.json())
         .then(data => {
           jobsData = data;
@@ -452,7 +452,7 @@
       modalContent.innerHTML = '<div style="text-align:center;padding:32px 0;">Loading...</div>';
       modalOverlay.style.display = 'flex';
       currentJobId = jobId;
-      fetch(`http://51.20.5.188:8002/api/jobs/${jobId}`)
+      fetch(`https://altellect.software/api/jobs/${jobId}`)
         .then(res => res.json())
         .then(data => {
           const job = data.job;
@@ -525,7 +525,7 @@
       applyMsg.textContent = '';
       const formData = new FormData(applyForm);
 
-      fetch('http://51.20.5.188:8002/api/jobs/apply/', {
+      fetch('https://altellect.software/api/jobs/apply/', {
         method: 'POST',
         body: formData
       })
