@@ -12,28 +12,40 @@
 <body>
 
 <!-- HEADER (same as other pages) -->
-<header class=" header-two">
+<header class="header-two">
   <div class="header-container container">
     <div class="logo-wrap">
-            <a href="index.html">
-                <img src="assets/Logo.png" alt="Altellect" />
-            </a>
- 
+        <a href="index.html">
+            <img src="assets/Logo.png" alt="Altellect" />
+        </a>
     </div>
 
     <nav class="nav">
-      <a class="active" href="index.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="about-us.html">About Us</a>
       <a href="Projects.html">Projects</a>
       <a href="capital.html">Altellect Capital</a>
       <a href="carrers.html">Careers</a>
-     
       <a href="contact.html">Contact Us</a>
     </nav>
 
-     <a class="join-btn" href="join.html">Join The Ecosystem</a>
-        <title>Altellect</title>
-        <link rel="icon" type="image/png" href="assets/fav-logo.png" />
+    <a class="join-btn" href="join.html">Join The Ecosystem</a>
+    
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about-us.html">About Us</a>
+    <a href="Projects.html">Projects</a>
+    <a href="capital.html">Altellect Capital</a>
+    <a href="carrers.html">Careers</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="join.html" class="mobile-join-btn">Join The Ecosystem</a>
+  </div>
 </header>
 
 <main class="funding-main">
@@ -123,5 +135,6 @@
     </div>
 </footer>
 
+<script src="mobile-menu.js"></script>
 </body>
 </html>
