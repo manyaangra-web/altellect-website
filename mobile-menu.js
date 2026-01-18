@@ -26,4 +26,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Mobile footer accordion functionality
+    if (window.innerWidth <= 900) {
+        const footerSections = document.querySelectorAll('.footer-grid > div:not(.footer-brand)');
+        
+        footerSections.forEach(section => {
+            const heading = section.querySelector('h5');
+            if (heading) {
+                heading.addEventListener('click', function() {
+                    section.classList.toggle('expanded');
+                });
+            }
+        });
+    }
 });
+

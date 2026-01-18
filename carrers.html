@@ -35,14 +35,14 @@
 			<span></span>
 		</button>
 	</div>
-	<div class="mobile-menu">
-		<a href="index.html">Home</a>
-		<a href="about-us.html">About Us</a>
-		<a href="Projects.html">Projects</a>
-		<a href="capital.html">Altellect Capital</a>
-		<a href="carrers.html">Careers</a>
-		<a href="contact.html">Contact Us</a>
-		<a href="join.html" class="mobile-join-btn">Join The Ecosystem</a>
+	<div class="mobile-menu" style="padding-top:0;margin-top:0;">
+		<a href="index.html" class="mobile-nav-link">Home</a>
+		<a href="about-us.html" class="mobile-nav-link">About Us</a>
+		<a href="Projects.html" class="mobile-nav-link">Projects</a>
+		<a href="capital.html" class="mobile-nav-link">Altellect Capital</a>
+		<a href="carrers.html" class="mobile-nav-link active">Careers</a>
+		<a href="contact.html" class="mobile-nav-link">Contact Us</a>
+		<a href="join.html" class="mobile-join-btn" style="display:block;width:90%;margin:18px auto 0 auto;padding:12px 0;background:#fff;color:#111;font-weight:700;font-size:18px;text-align:center;border-radius:2px;border:none;box-shadow:none;letter-spacing:0.5px;text-decoration:none;">Join The Ecosystem</a>
 	</div>
 </header>
 
@@ -560,6 +560,14 @@
     fetchJobs();
   });
 </script>
+
+<style>
+  @media (max-width: 768px) {
+    div[style*="flex:1 1 340px"][style*="align-items:center"] img {
+      margin-left: 0 !important;
+    }
+  }
+</style>
 
 <script src="mobile-menu.js"></script>
 </body>

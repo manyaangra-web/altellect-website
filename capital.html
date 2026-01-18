@@ -36,14 +36,14 @@
 				<span></span>
 			</button>
 		</div>
-		<div class="mobile-menu">
-			<a href="index.html">Home</a>
-			<a href="about-us.html">About Us</a>
-			<a href="Projects.html">Projects</a>
-			<a href="capital.html">Altellect Capital</a>
-			<a href="carrers.html">Careers</a>
-			<a href="contact.html">Contact Us</a>
-			<a href="join.html" class="mobile-join-btn">Join The Ecosystem</a>
+		<div class="mobile-menu" style="padding-top:0;margin-top:0;">
+			<a href="index.html" class="mobile-nav-link">Home</a>
+			<a href="about-us.html" class="mobile-nav-link">About Us</a>
+			<a href="Projects.html" class="mobile-nav-link">Projects</a>
+			<a href="capital.html" class="mobile-nav-link active">Altellect Capital</a>
+			<a href="carrers.html" class="mobile-nav-link">Careers</a>
+			<a href="contact.html" class="mobile-nav-link">Contact Us</a>
+			<a href="join.html" class="mobile-join-btn" style="display:block;width:90%;margin:18px auto 0 auto;padding:12px 0;background:#fff;color:#111;font-weight:700;font-size:18px;text-align:center;border-radius:2px;border:none;box-shadow:none;letter-spacing:0.5px;text-decoration:none;">Join The Ecosystem</a>
 		</div>
 	</header>
 
@@ -81,7 +81,8 @@
 				<div style="font-size:1rem; color:#e6e6e6; margin-bottom:24px;text-align:center;">From seed to scale:
 					choose the model that fits your vision</div>
 				<div style="height:2px; background:#FDB913; width:90%; margin:24px auto 32px auto;"></div>
-				   <div class="capital-formats-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+				   <div class="capital-formats-wrapper" style="position:relative; overflow:hidden; width:100%;">
+				   <div class="capital-formats-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; transition:transform 0.4s ease;">
 					   <div class="format-card" style="border-radius:8px; padding:24px; display:flex; align-items:center; gap:18px;">
 						   <img src="assets/Group 97.png" alt="Format Icon" style="width:50px; height:50px; background:#FDB913; border-radius:0; flex-shrink:0;" />
 						   <div style="text-align:left;">
@@ -117,6 +118,8 @@
 							   <div style="color:#e6e6e6; font-size:0.98rem;">Incubate teams into independent ventures</div>
 						   </div>
 					   </div>
+				   </div>
+				   <div class="format-dots" style="display:none; justify-content:center; gap:8px; margin-top:20px;"></div>
 				   </div>
 			</div>
 		</section>
@@ -217,7 +220,79 @@
 		</div>
 	</footer>
 
+	<style>
+		@media (max-width: 900px) {
+			.capital-formats-wrapper {
+				overflow: hidden !important;
+				width: 100% !important;
+			}
+			.capital-formats-grid {
+				display: flex !important;
+				flex-direction: row;
+				gap: 0 !important;
+				overflow: visible;
+				grid-template-columns: none !important;
+			}
+			.format-card {
+				min-width: 100vw;
+				max-width: 100vw;
+				width: 100vw;
+				flex-shrink: 0;
+				padding: 20px !important;
+			}
+			.format-dots {
+				display: flex !important;
+			}
+			.format-dots .dot {
+				width: 10px;
+				height: 10px;
+				background: #666;
+				border-radius: 50%;
+				cursor: pointer;
+				transition: background 0.3s;
+			}
+			.format-dots .dot.active {
+				background: #FDB913;
+			}
+		}
+	</style>
+
 	<script src="mobile-menu.js"></script>
+	<script>
+		// Format cards mobile slider
+		if (window.innerWidth <= 900) {
+			const formatCards = document.querySelectorAll('.format-card');
+			const formatsGrid = document.querySelector('.capital-formats-grid');
+			const dotsContainer = document.querySelector('.format-dots');
+			let currentCardIdx = 0;
+
+			// Create dots
+			formatCards.forEach((_, idx) => {
+				const dot = document.createElement('span');
+				dot.classList.add('dot');
+				if (idx === 0) dot.classList.add('active');
+				dot.addEventListener('click', () => showCard(idx));
+				dotsContainer.appendChild(dot);
+			});
+
+			const dots = dotsContainer.querySelectorAll('.dot');
+
+			function showCard(idx) {
+				const offset = -idx * 100; // 100vw per card
+				formatsGrid.style.transform = `translateX(${offset}vw)`;
+				dots.forEach((dot, i) => dot.classList.toggle('active', i === idx));
+				currentCardIdx = idx;
+			}
+
+			// Auto-slide every 5 seconds
+			setInterval(() => {
+				const next = (currentCardIdx + 1) % formatCards.length;
+				showCard(next);
+			}, 5000);
+
+			showCard(0);
+		}
+	</script>
 </body>
 
 </html>

@@ -36,15 +36,15 @@
         <span></span>
       </button>
     </div>
-    <div class="mobile-menu">
-      <a href="index.html">Home</a>
-      <a href="about-us.html">About Us</a>
-      <a href="Projects.html">Projects</a>
-      <a href="capital.html">Altellect Capital</a>
-      <a href="carrers.html">Careers</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="join.html" class="mobile-join-btn">Join The Ecosystem</a>
-    </div>
+      <div class="mobile-menu" style="padding-top:0;margin-top:0;">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="about-us.html" class="mobile-nav-link active">About Us</a>
+        <a href="Projects.html" class="mobile-nav-link">Projects</a>
+        <a href="capital.html" class="mobile-nav-link">Altellect Capital</a>
+        <a href="carrers.html" class="mobile-nav-link">Careers</a>
+        <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+        <a href="join.html" class="mobile-join-btn" style="display:block;width:90%;margin:0 auto;padding:12px 0;background:#fff;color:#111;font-weight:700;font-size:18px;text-align:center;border-radius:2px;border:none;box-shadow:none;letter-spacing:0.5px;text-decoration:none;">Join The Ecosystem</a>
+      </div>
   </header>
 <!-- HERO -->
 <section class="about-hero">
@@ -114,7 +114,7 @@
       </p>
   </div>
 </div>
-
+      <div class="how-build-dots"></div>
       </div>
   </div>
 </section>
@@ -197,19 +197,23 @@
       }
       @media (max-width: 900px) {
         .how-build-boxes-row-bg {
-          padding: 18px 0 18px 0;
+          padding: 18px 0 32px 0;
         }
         .how-build-boxes {
-          flex-direction: column;
-          gap: 18px;
-          max-width: 98vw;
+          flex-direction: row;
+          gap: 0;
+          max-width: 100vw;
           align-items: center;
+          overflow: hidden;
+          transition: transform 0.4s ease;
         }
         .how-build-boxes .box {
-          min-width: 0;
-          max-width: 98vw;
-          width: 100%;
-          padding: 24px 8px 12px 8px;
+          min-width: 100vw;
+          max-width: 100vw;
+          width: 100vw;
+          padding: 24px 20px 16px 20px;
+          margin: 0;
+          flex-shrink: 0;
         }
         .arrow-down {
           border-left: 12px solid transparent;
@@ -223,6 +227,28 @@
       justify-content: center;
   
       background: #F2F2F2 0% 0% no-repeat padding-box;
+    }
+    .how-build-dots {
+      display: none;
+      justify-content: center;
+      gap: 8px;
+      margin: 16px 0 0 0;
+    }
+    .how-build-dots .dot {
+      width: 10px;
+      height: 10px;
+      background: #666;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .how-build-dots .dot.active {
+      background: #FDB913;
+    }
+    @media (max-width: 900px) {
+      .how-build-dots {
+        display: flex;
+      }
     }
     .belief-row {
       display: flex;
@@ -277,7 +303,7 @@
       .belief-row {
         flex-direction: column;
         max-width: 98vw;
-        padding: 16px 0;
+        padding: 16px 20px;
       }
  
       .belief-col {
@@ -517,43 +543,35 @@
 }
 @media (max-width: 900px) {
   .slider-leadership {
-    max-width: 98vw;
-    margin-top: 8px; /* reduced top margin for mobile */
-    padding-bottom: 6px; /* reduced bottom padding for mobile */
+    max-width: 100vw;
+    margin-top: 8px;
+    padding-bottom: 6px;
+    overflow: hidden;
   }
   .slider-track {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin: 0;
-    width: 100%;
-    gap: 4px; /* reduced gap for mobile */
+    width: auto;
+    gap: 0;
   }
   .slide {
     margin: 0;
-    min-width: 90vw;
-    max-width: 98vw;
-    min-height: 220px;
-    max-height: 220px;
-    height: 220px;
+    min-width: 100vw;
+    max-width: 100vw;
+    width: 100vw;
+    min-height: 240px;
+    max-height: 240px;
+    height: 240px;
     flex-direction: column;
-    padding: 6px 2px; /* reduced padding for mobile */
+    padding: 8px 20px;
+    flex-shrink: 0;
+    opacity: 1;
+    transform: scale(1);
   }
   .leader-card {
     height: 100%;
     min-height: 0;
-  }
-}
-@media (max-width: 900px) {
-  .slider-track {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-    width: 100%;
-  }
-  .slide {
-    margin: 0 0 18px 0;
-    min-width: 90vw;
-    max-width: 98vw;
   }
 }
 .leader-img {
@@ -619,25 +637,16 @@
 .dot.active {
   background: #FDB913;
 }
-@media (max-width: 900px) {
-  .slider-track {
-    flex-direction: column;
-    align-items: center;
-  }
-  .slide {
-    margin: 0 0 18px 0;
-    min-width: 90vw;
-    max-width: 98vw;
-  }
-}
 </style>
 
 <script>
 const slides = document.querySelectorAll(".slide");
-const slidesPerView = 2;
+const isMobile = window.innerWidth <= 900;
+const slidesPerView = isMobile ? 1 : 2;
 const totalDots = Math.ceil(slides.length / slidesPerView);
 const dotsContainer = document.querySelector(".slider-dots");
-let currentSlideIdx = 0; // Default to first slide (Vijay)
+const sliderTrack = document.querySelector(".slider-track");
+let currentSlideIdx = 0;
 
 // Create dots dynamically
 for (let i = 0; i < totalDots; i++) {
@@ -651,16 +660,29 @@ for (let i = 0; i < totalDots; i++) {
 const dots = document.querySelectorAll(".dot");
 
 function showSlides(idx) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove("active", "active2");
-    if (i >= idx * slidesPerView && i < idx * slidesPerView + slidesPerView) {
+  if (isMobile) {
+    // Mobile: Transform slider track to show one card
+    const offset = -idx * 100; // 100vw per card
+    sliderTrack.style.transform = `translateX(${offset}vw)`;
+    
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active", "active2");
       slide.style.display = "flex";
-      if (i === idx * slidesPerView) slide.classList.add("active");
-      if (i === idx * slidesPerView + 1) slide.classList.add("active2");
-    } else {
-      slide.style.display = "none";
-    }
-  });
+      if (i === idx) slide.classList.add("active");
+    });
+  } else {
+    // Desktop: Show 2 cards at a time
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active", "active2");
+      if (i >= idx * slidesPerView && i < idx * slidesPerView + slidesPerView) {
+        slide.style.display = "flex";
+        if (i === idx * slidesPerView) slide.classList.add("active");
+        if (i === idx * slidesPerView + 1) slide.classList.add("active2");
+      } else {
+        slide.style.display = "none";
+      }
+    });
+  }
 
   dots.forEach((dot, i) => dot.classList.toggle("active", i === idx));
   currentSlideIdx = idx;
@@ -669,9 +691,8 @@ function showSlides(idx) {
 setInterval(() => {
   let next = (currentSlideIdx + 1) % totalDots;
   showSlides(next);
-}, 15000); // Much slower auto-slide: 15 seconds
+}, 15000);
 
-// Ensure Vijay (first card) is always the default
 showSlides(0);
 </script>
 
@@ -729,5 +750,40 @@ showSlides(0);
 </footer>
 
 <script src="mobile-menu.js"></script>
+<script>
+// How We Build boxes mobile slider
+if (window.innerWidth <= 900) {
+  const boxes = document.querySelectorAll('.how-build-boxes .box');
+  const boxesContainer = document.querySelector('.how-build-boxes');
+  const dotsContainer = document.querySelector('.how-build-dots');
+  let currentBoxIdx = 0;
+
+  // Create dots
+  boxes.forEach((_, idx) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (idx === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => showBox(idx));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll('.dot');
+
+  function showBox(idx) {
+    const offset = -idx * 100; // 100vw per box
+    boxesContainer.style.transform = `translateX(${offset}vw)`;
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === idx));
+    currentBoxIdx = idx;
+  }
+
+  // Auto-slide every 5 seconds
+  setInterval(() => {
+    const next = (currentBoxIdx + 1) % boxes.length;
+    showBox(next);
+  }, 5000);
+
+  showBox(0);
+}
+</script>
 </body>
 </html>

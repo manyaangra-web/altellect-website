@@ -240,6 +240,14 @@ background: #F2F2F2 0% 0% no-repeat padding-box;
   .venture-content-wrap {
     align-items: center;
   }
+  .venture-card.horizontal-card .venture-content-wrap {
+    align-items: center;
+    text-align: center;
+  }
+  .venture-title,
+  .venture-desc {
+    text-align: center;
+  }
 }
 @media (max-width: 700px) {
   .ventures-grid { grid-template-columns: 1fr; }
